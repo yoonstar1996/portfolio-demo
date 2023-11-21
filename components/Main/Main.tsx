@@ -9,12 +9,17 @@ import Project from "./Project";
 interface MainProps {
   aboutMeRef: any;
   projectRef: any;
+  handleClickAboutMe: () => void;
 }
 
-export default function Main({ aboutMeRef, projectRef }: MainProps) {
+export default function Main({
+  aboutMeRef,
+  projectRef,
+  handleClickAboutMe,
+}: MainProps) {
   return (
     <Container>
-      <Home />
+      <Home handleClickAboutMe={handleClickAboutMe} />
       <AboutMe aboutMeRef={aboutMeRef} />
       <Project projectRef={projectRef} />
     </Container>

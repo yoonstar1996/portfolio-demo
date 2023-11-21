@@ -1,5 +1,10 @@
 :root {
-  --main-font-color: #111;
+  --main-background-color: #222;
+
+  --main-font-color: #fff;
+
+  --main-border-color: 1px solid #fff;
+  --main-border-radius: 7px;
 
   --main-font-size: 16px;
   --sub-font-size-1: 14px;
@@ -8,17 +13,40 @@
 
   --main-margin-col-size-1: 0 10px;
   --main-margin-col-size-2: 0 20px;
-
-  --main-padding-col-size-1: 0 10px;
-  --main-padding-col-size-2: 0 20px;
-
   --main-margin-row-size-1: 10 0px;
   --main-margin-row-size-2: 20 0px;
 
+  --main-padding-size-1: 10px 15px;
+  --main-padding-size-2: 15px 20px;
+  --main-padding-size-3: 20px 25px;
+  --main-padding-col-size-1: 0 10px;
+  --main-padding-col-size-2: 0 20px;
   --main-padding-row-size-1: 0 10px;
   --main-padding-row-size-2: 0 20px;
+
+  --main-nav-border-bottom: 1px solid #ddd;
+
+  --main-home-background-color: linear-gradient(
+    45deg,
+    #1a1a1a,
+    #2a2a2a,
+    #333333,
+    #1a1a1a,
+    #2a2a2a,
+    #1a1a1a
+  );
 }
 
 [data-theme="dark"] {
   --main-font-color: #fff;
+
+  --main-home-background-color: linear-gradient(
+    45deg,
+    #ff8a00,
+    #e52e71,
+    #00aaff,
+    #7f00ff,
+    #ff0086,
+    #ff8a00
+  );
 }

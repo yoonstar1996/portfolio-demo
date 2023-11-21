@@ -40,14 +40,15 @@ export default function Nav({
 
 const Container = styled.nav`
   position: fixed;
+  z-index: 10;
   width: 100%;
   height: 58px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: skyblue;
+  background-color: var(--main-background-color);
   /* padding: var(--main-padding-col-size-2); */
-  border-bottom: 1.5px solid red;
+  border-bottom: var(--main-nav-border-bottom);
   box-sizing: border-box;
 `;
 const Menu = styled.ul`

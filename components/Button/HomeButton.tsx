@@ -3,17 +3,15 @@
 import React from "react";
 import styled from "styled-components";
 
-interface IconButtonProps {
+interface HomeButtonProps {
   text: string;
   onClick?: () => void;
 }
 
-export default function IconButton({ text, onClick }: IconButtonProps) {
+export default function HomeButton({ text, onClick }: HomeButtonProps) {
   return (
     <>
-      <Button onClick={onClick}>
-        <i className="material-symbols-outlined">{text}</i>
-      </Button>
+      <Button onClick={onClick}>{text}</Button>
     </>
   );
 }
@@ -22,7 +20,9 @@ const Button = styled.button`
   color: var(--main-font-color);
   margin: var(--main-margin-col-size-1);
   font-size: var(--main-font-size);
-  border: none;
+  border: var(--main-border-color);
+  padding: var(--main-padding-size-2);
+  border-radius: var(--main-border-radius);
   background-color: transparent;
   &:hover {
     cursor: pointer;

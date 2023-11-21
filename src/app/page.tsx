@@ -31,7 +31,11 @@ export default function ProjectContainer() {
         handleClickAboutMe={handleClickAboutMe}
         handleClickProject={handleClickProject}
       />
-      <Main aboutMeRef={aboutMeRef} projectRef={projectRef} />
+      <Main
+        aboutMeRef={aboutMeRef}
+        projectRef={projectRef}
+        handleClickAboutMe={handleClickAboutMe}
+      />
       <Footer />
     </>
   );
