@@ -16,6 +16,8 @@ export default function Project({ projectRef }: ProjectProps) {
 }
 
 const Container = styled.div`
-  height: calc(100vh - 58px);
-  background-color: #bd2fff;
+  height: calc(100% - 58px);
+  background-color: var(--main-background-color-2);
+  padding: 116px 50px 50px;
+  box-sizing: border-box;
 `;

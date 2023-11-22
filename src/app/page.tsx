@@ -21,7 +21,7 @@ export default function ProjectContainer() {
     if (aboutMeRef.current) {
       aboutMeRef.current.scrollIntoView({
         behavior: "smooth",
-        block: "end",
+        block: "start",
       });
     }
   };
@@ -29,7 +29,7 @@ export default function ProjectContainer() {
     if (projectRef.current) {
       projectRef.current.scrollIntoView({
         behavior: "smooth",
-        block: "end",
+        block: "start",
       });
     }
   };

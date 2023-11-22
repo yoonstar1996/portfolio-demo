@@ -24,6 +24,7 @@ export default function Nav({
 
   return (
     <Container>
+      <Logo onClick={handleClickHome}>{`Yoonstar's Portfolio`}</Logo>
       <Menu>
         <NavButton text="Home" onClick={handleClickHome} />
         <NavButton text="About Me" onClick={handleClickAboutMe} />
@@ -48,10 +49,18 @@ const Container = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--main-background-color);
+  background-color: var(--main-background-color-2);
   padding: 0 30px;
   border-bottom: var(--main-nav-border-bottom);
   box-sizing: border-box;
+`;
+const Logo = styled.div`
+  color: var(--main-font-color);
+  font-size: var(--main-font-size-20);
+  font-weight: 600;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 const Menu = styled.ul`
   display: flex;

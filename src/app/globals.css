@@ -1,5 +1,6 @@
 :root {
-  --main-background-color: #222;
+  --main-background-color-2: #222;
+  /* --main-background-color-3: #333; */
 
   --main-font-color: #fff;
 
@@ -38,7 +39,8 @@
 }
 
 [data-theme="light"] {
-  --main-background-color: #fff;
+  --main-background-color-2: #fff;
+  /* --main-background-color-3: #ddd; */
 
   --main-font-color: #111;
 
