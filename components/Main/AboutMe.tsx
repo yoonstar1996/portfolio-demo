@@ -10,7 +10,7 @@ interface AboutMeProps {
 
 export default function AboutMe({ isDarkMode, aboutMeRef }: AboutMeProps) {
   const myRef = useRef(null);
-  const [isVisible, setIsVisible] = useState<string>("false");
+  const [isVisible, setIsVisible] = useState(false);
   const handleClickGithub = () => {
     window.open("https://github.com/yoonstar1996", "_blank");
   };
@@ -26,9 +26,9 @@ export default function AboutMe({ isDarkMode, aboutMeRef }: AboutMeProps) {
       entries.forEach((entry) => {
         // 화면에 보일 때
         if (entry.isIntersecting) {
-          setIsVisible("true");
+          setIsVisible(true);
         } else {
-          setIsVisible("false");
+          setIsVisible(false);
         }
       });
     };
@@ -49,7 +49,7 @@ export default function AboutMe({ isDarkMode, aboutMeRef }: AboutMeProps) {
 
   return (
     <Container ref={aboutMeRef}>
-      <Information ref={myRef} isVisible={isVisible.toString()}>
+      <Information ref={myRef}>
         <ImageContainer>
           <Image src="/mypicture.jpg" alt="my_picture" fill />
         </ImageContainer>
@@ -76,7 +76,10 @@ export default function AboutMe({ isDarkMode, aboutMeRef }: AboutMeProps) {
           </Github>
         </Contact>
       </Information>
-      <SkillBox></SkillBox>
+      <SkillBox>
+        <Image src={"/html.png"} alt="html_logo" width={100} height={100} />
+        <Image src={"/css.png"} alt="html_logo" width={100} height={100} />
+      </SkillBox>
       <div className="소개글">
         <IntroductionText>
           안녕하세요. 신입 프론트엔드 개발자 <strong>윤경민</strong>입니다.
@@ -119,13 +122,11 @@ const Container = styled.div`
   padding: 116px 50px 50px;
   box-sizing: border-box;
 `;
-const Information = styled.div<{ isVisible: string }>`
+const Information = styled.div`
   /* margin-top: 58px; */
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
-  transition: "opacity 0.5s ease-in-out";
 `;
 const ImageContainer = styled.div`
   position: relative;
