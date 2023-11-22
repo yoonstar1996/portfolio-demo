@@ -4,14 +4,17 @@ import React from "react";
 import styled from "styled-components";
 import NavButton from "../Button/NavButton";
 import IconButton from "../Button/IconButton";
-import Image from "next/image";
 
 interface NavProps {
+  isDarkMode: boolean;
+  handleDarkMode: () => void;
   handleClickAboutMe: () => void;
   handleClickProject: () => void;
 }
 
 export default function Nav({
+  isDarkMode,
+  handleDarkMode,
   handleClickAboutMe,
   handleClickProject,
 }: NavProps) {
@@ -21,18 +24,17 @@ export default function Nav({
 
   return (
     <Container>
-      {/* <ImageContainer>
-        <Image src="/logo.png" alt="logo_image" fill property="100" />
-      </ImageContainer> */}
-      <div>로고</div>
       <Menu>
         <NavButton text="Home" onClick={handleClickHome} />
         <NavButton text="About Me" onClick={handleClickAboutMe} />
         <NavButton text="Project" onClick={handleClickProject} />
       </Menu>
       <SideMenu>
-        <IconButton text="버튼1" />
-        <IconButton text="버튼2" />
+        <IconButton
+          text={isDarkMode ? "dark_mode" : "light_mode"}
+          onClick={handleDarkMode}
+        />
+        {/* <IconButton text="버튼2" /> */}
       </SideMenu>
     </Container>
   );
@@ -47,7 +49,7 @@ const Container = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-background-color);
-  /* padding: var(--main-padding-col-size-2); */
+  padding: 0 30px;
   border-bottom: var(--main-nav-border-bottom);
   box-sizing: border-box;
 `;

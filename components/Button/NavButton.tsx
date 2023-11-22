@@ -19,7 +19,8 @@ export default function NavButton({ text, onClick }: NavButtonProps) {
 const Button = styled.button`
   color: var(--main-font-color);
   margin: var(--main-margin-col-size-1);
-  font-size: var(--main-font-size);
+  font-size: var(--main-font-size-16);
+  font-weight: 600;
   border: none;
   background-color: transparent;
   &:hover {

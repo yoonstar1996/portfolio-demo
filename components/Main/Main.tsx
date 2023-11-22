@@ -7,12 +7,14 @@ import AboutMe from "./AboutMe";
 import Project from "./Project";
 
 interface MainProps {
+  isDarkMode: boolean;
   aboutMeRef: any;
   projectRef: any;
   handleClickAboutMe: () => void;
 }
 
 export default function Main({
+  isDarkMode,
   aboutMeRef,
   projectRef,
   handleClickAboutMe,
@@ -20,7 +22,7 @@ export default function Main({
   return (
     <Container>
       <Home handleClickAboutMe={handleClickAboutMe} />
-      <AboutMe aboutMeRef={aboutMeRef} />
+      <AboutMe isDarkMode={isDarkMode} aboutMeRef={aboutMeRef} />
       <Project projectRef={projectRef} />
     </Container>
   );

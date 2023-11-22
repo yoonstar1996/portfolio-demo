@@ -45,8 +45,7 @@ const BackgroundAnimation = styled.div`
   left: 0;
   width: 100%;
   height: calc(100vh - 58px);
-  /* background: linear-gradient(45deg, #ff8a00, #e52e71, #00aaff, #7f00ff, #ff0086, #ff8a00); */
-  background: linear-gradient(45deg, #1a1a1a, #2a2a2a, #333333, #1a1a1a, #2a2a2a, #1a1a1a);
+  background: var(--main-home-background-color);
   background-size: 600% 600%;
   animation: ${animation} 20s ease infinite;
 `;
@@ -59,13 +58,14 @@ const Content = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: white;
   text-align: center;
 `;
 
 const Title = styled.h1`
   font-size: 2rem;
   margin-bottom: 30px;
+  /* color: var(--main-font-color); */
+  color: #fff;
 `;
 
 const Subtitle = styled.h2`
