@@ -1,12 +1,13 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Main from "../../components/Main/Main";
 import Nav from "../../components/Nav/Nav";
+import styled from "styled-components";
 
 export default function ProjectContainer() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
   const handleDarkMode = () => {
@@ -19,20 +20,34 @@ export default function ProjectContainer() {
   };
   const handleClickAboutMe = () => {
     if (aboutMeRef.current) {
-      aboutMeRef.current.scrollIntoView({
+      const navHeight = 58; // Nav의 높이
+      const elementTop =
+        aboutMeRef.current.getBoundingClientRect().top + window.scrollY;
+      const offset = elementTop - navHeight;
+
+      window.scrollTo({
+        top: offset,
         behavior: "smooth",
-        block: "start",
       });
     }
   };
   const handleClickProject = () => {
     if (projectRef.current) {
-      projectRef.current.scrollIntoView({
+      const navHeight = 58; // Nav의 높이
+      const elementTop =
+        projectRef.current.getBoundingClientRect().top + window.scrollY;
+      const offset = elementTop - navHeight;
+
+      window.scrollTo({
+        top: offset,
         behavior: "smooth",
-        block: "start",
       });
     }
   };
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", "light");
+  }, []);
 
   return (
     <>
@@ -47,6 +62,7 @@ export default function ProjectContainer() {
         aboutMeRef={aboutMeRef}
         projectRef={projectRef}
         handleClickAboutMe={handleClickAboutMe}
+        handleClickProject={handleClickProject}
       />
       <Footer />
     </>

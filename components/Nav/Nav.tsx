@@ -28,11 +28,11 @@ export default function Nav({
       <Menu>
         <NavButton text="Home" onClick={handleClickHome} />
         <NavButton text="About Me" onClick={handleClickAboutMe} />
-        <NavButton text="Project" onClick={handleClickProject} />
+        <NavButton text="Projects" onClick={handleClickProject} />
       </Menu>
       <SideMenu>
         <IconButton
-          text={isDarkMode ? "dark_mode" : "light_mode"}
+          text={isDarkMode ? "light_mode" : "dark_mode"}
           onClick={handleDarkMode}
         />
         {/* <IconButton text="버튼2" /> */}
@@ -43,6 +43,8 @@ export default function Nav({
 
 const Container = styled.nav`
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 10;
   width: 100%;
   height: 58px;
@@ -51,15 +53,17 @@ const Container = styled.nav`
   align-items: center;
   background-color: var(--main-background-color-2);
   padding: 0 30px;
-  border-bottom: var(--main-nav-border-bottom);
+  /* border-bottom: var(--main-nav-border-bottom); */
+  box-shadow: 0 1px 0.3rem hsla(0,0%,80%,.8);
   box-sizing: border-box;
 `;
 const Logo = styled.div`
   color: var(--main-font-color);
-  font-size: var(--main-font-size-20);
+  font-size: 20px;
   font-weight: 600;
   &:hover {
     cursor: pointer;
+    color: #ff4848;
   }
 `;
 const Menu = styled.ul`

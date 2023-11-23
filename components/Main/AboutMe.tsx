@@ -3,12 +3,18 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import Title from "../Title/Title";
 interface AboutMeProps {
   isDarkMode: boolean;
   aboutMeRef: any;
+  handleClickAboutMe: () => void;
 }
 
-export default function AboutMe({ isDarkMode, aboutMeRef }: AboutMeProps) {
+export default function AboutMe({
+  isDarkMode,
+  aboutMeRef,
+  handleClickAboutMe,
+}: AboutMeProps) {
   const myRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const handleClickGithub = () => {
@@ -42,6 +48,7 @@ export default function AboutMe({ isDarkMode, aboutMeRef }: AboutMeProps) {
     // 옵저버 해제
     return () => {
       if (myRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(myRef.current);
       }
     };
@@ -49,6 +56,7 @@ export default function AboutMe({ isDarkMode, aboutMeRef }: AboutMeProps) {
 
   return (
     <Container ref={aboutMeRef}>
+      <Title text="About Me" onClick={handleClickAboutMe} />
       <Information ref={myRef}>
         <ImageContainer>
           <Image src="/mypicture.jpg" alt="my_picture" fill />
@@ -119,9 +127,10 @@ const Flex = styled.div`
 const Container = styled.div`
   height: calc(100% - 58px);
   background-color: var(--main-background-color-2);
-  padding: 116px 50px 50px;
+  padding: 20px 50px;
   box-sizing: border-box;
 `;
+
 const Information = styled.div`
   /* margin-top: 58px; */
   display: flex;
@@ -139,7 +148,7 @@ const ImageContainer = styled.div`
 const Contact = styled.div`  
 `;
 const Name = styled.div`
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--main-font-color);
   margin-bottom: 25px;
 `;
@@ -148,7 +157,7 @@ const Phone = styled(Flex)`
   margin-bottom: 10px;
 `;
 const Text = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-left: 10px;
 `;
 const Email = styled(Phone)``;
@@ -169,5 +178,5 @@ const IntroductionText = styled.div`
   font-size: 1.2rem;
   color: var(--main-font-color);
   line-height: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;

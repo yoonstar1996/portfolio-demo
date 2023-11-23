@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 interface IconButtonProps {
@@ -9,22 +9,32 @@ interface IconButtonProps {
 }
 
 export default function IconButton({ text, onClick }: IconButtonProps) {
+  const [darkMode, setIsDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (text === "dark_mode") {
+      setIsDarkMode(true);
+    } else {
+      setIsDarkMode(false);
+    }
+  }, [text]);
   return (
     <>
-      <Button onClick={onClick}>
+      <Button onClick={onClick} isdarkmode={darkMode.toString()}>
         <i className="material-symbols-outlined">{text}</i>
       </Button>
     </>
   );
 }
 
-const Button = styled.button`
+const Button = styled.button<{ isdarkmode: string }>`
   color: var(--main-font-color);
-  margin: var(--main-margin-col-size-1);
-  font-size: var(--main-font-size);
+  font-size: var(--main-font-size-20);
   border: none;
   background-color: transparent;
   &:hover {
     cursor: pointer;
+    color: ${(props) => (props.isdarkmode === "true" ? "#5448ff" : "#ffbf48")};
+
   }
 `;

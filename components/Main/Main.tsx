@@ -4,13 +4,14 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Home from "./Home";
 import AboutMe from "./AboutMe";
-import Project from "./Project";
+import Projects from "./Projects";
 
 interface MainProps {
   isDarkMode: boolean;
   aboutMeRef: any;
   projectRef: any;
   handleClickAboutMe: () => void;
+  handleClickProject: () => void;
 }
 
 export default function Main({
@@ -18,6 +19,7 @@ export default function Main({
   aboutMeRef,
   projectRef,
   handleClickAboutMe,
+  handleClickProject,
 }: MainProps) {
   const [showScrollBox, setShowScrollBox] = useState(false);
   const handleClickScrollTop = () => {
@@ -48,13 +50,17 @@ export default function Main({
   return (
     <Container>
       <Home handleClickAboutMe={handleClickAboutMe} />
-      <AboutMe isDarkMode={isDarkMode} aboutMeRef={aboutMeRef} />
-      <Project projectRef={projectRef} />
+      <AboutMe
+        isDarkMode={isDarkMode}
+        aboutMeRef={aboutMeRef}
+        handleClickAboutMe={handleClickAboutMe}
+      />
+      <Projects
+        projectRef={projectRef}
+        handleClickProject={handleClickProject}
+      />
       {showScrollBox && (
-        <ScrollBox
-          onClick={handleClickScrollTop}
-          show={showScrollBox.toString()}
-        >
+        <ScrollBox onClick={handleClickScrollTop}>
           <Arrow className="material-symbols-outlined">expand_less</Arrow>
         </ScrollBox>
       )}
@@ -66,7 +72,7 @@ const Container = styled.main`
   padding-top: 58px;
 `;
 
-const ScrollBox = styled.div<{ show: string }>`
+const ScrollBox = styled.div`
   position: fixed;
   display: flex;
   justify-content: center;

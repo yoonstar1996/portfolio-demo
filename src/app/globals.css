@@ -1,16 +1,18 @@
 :root {
-  --main-background-color-2: #222;
-  /* --main-background-color-3: #333; */
+  --main-background-color-2: #fff;
+  --main-background-color-3: #eee;
+  --aboutme-background-color: #fff;
 
-  --main-font-color: #fff;
+  --project-box-background: #fff;
+
+  --main-font-color: #111;
+  --sub-font-color: #fff;
 
   --main-border-color: 2px solid #fff;
+
   --main-border-radius: 7px;
 
-  --main-font-size-14: 14px;
-  --main-font-size-16: 16px;
-  --main-font-size-18: 18px;
-  --main-font-size-20: 20px;
+  --main-scroll-top-button: #ddd;
 
   --main-margin-col-size-1: 0 10px;
   --main-margin-col-size-2: 0 20px;
@@ -25,28 +27,10 @@
   --main-padding-row-size-1: 0 10px;
   --main-padding-row-size-2: 0 20px;
 
-  --main-nav-border-bottom: 1px solid #ddd;
-
-  --main-scroll-top-button: #ddd;
-
-  --main-home-background-color: linear-gradient(
-    45deg,
-    #1a1a1a,
-    #2a2a2a,
-    #333333,
-    #1a1a1a,
-    #2a2a2a,
-    #1a1a1a
-  );
-}
-
-[data-theme="light"] {
-  --main-background-color-2: #fff;
-  /* --main-background-color-3: #ddd; */
-
-  --main-font-color: #111;
-
-  /* --main-border-color: 1px solid #111; */
+  --main-font-size-14: 14px;
+  --main-font-size-16: 16px;
+  --main-font-size-18: 18px;
+  --main-font-size-20: 20px;
 
   --main-nav-border-bottom: 1px solid #111;
 
@@ -58,5 +42,31 @@
     #7f00ff,
     #ff0086,
     #ff8a00
+  );
+
+  --main-project-box-shadow: rgba(68, 68, 68, 0.2);
+}
+
+[data-theme="dark"] {
+  --main-background-color-2: #222;
+  --main-background-color-3: #333;
+
+  --project-box-background: #222;
+
+  --main-font-color: #fff;
+  --sub-font-color: #111;
+
+  --main-nav-border-bottom: 1px solid #ddd;
+
+  --main-project-box-shadow: rgba(230, 230, 230, 0.2);
+
+  --main-home-background-color: linear-gradient(
+    45deg,
+    #1a1a1a,
+    #2a2a2a,
+    #333333,
+    #1a1a1a,
+    #2a2a2a,
+    #1a1a1a
   );
 }

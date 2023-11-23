@@ -25,5 +25,7 @@ const Button = styled.button`
   background-color: transparent;
   &:hover {
     cursor: pointer;
+    color: #ff4848;
+
   }
 `;
