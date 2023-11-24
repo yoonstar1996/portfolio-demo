@@ -52,7 +52,7 @@ const Container = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-background-color-2);
-  padding: 0 30px;
+  padding: 0 10px;
   /* border-bottom: var(--main-nav-border-bottom); */
   box-shadow: 0 1px 0.3rem hsla(0,0%,80%,.8);
   box-sizing: border-box;

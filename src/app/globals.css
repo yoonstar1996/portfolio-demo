@@ -1,7 +1,10 @@
 :root {
   --main-background-color-2: #fff;
-  --main-background-color-3: #eee;
+  /* --main-background-color-3: #eee; */
+  --main-background-color-3: #fff;
   --aboutme-background-color: #fff;
+
+  --main-readme-button-background-color: #111;
 
   --project-box-background: #fff;
 
@@ -45,6 +48,8 @@
   );
 
   --main-project-box-shadow: rgba(68, 68, 68, 0.2);
+
+  --main-url-color: #258ddb;
 }
 
 [data-theme="dark"] {
@@ -52,6 +57,8 @@
   --main-background-color-3: #333;
 
   --project-box-background: #222;
+
+  --main-readme-button-background-color: #fff;
 
   --main-font-color: #fff;
   --sub-font-color: #111;

@@ -32,7 +32,7 @@ export default function Main({
       100;
 
     // Adjust the threshold as needed
-    if (scrollPercentage > 40) {
+    if (scrollPercentage > 10) {
       setShowScrollBox(true);
     } else {
       setShowScrollBox(false);
@@ -58,6 +58,7 @@ export default function Main({
       <Projects
         projectRef={projectRef}
         handleClickProject={handleClickProject}
+        isDarkMode={isDarkMode}
       />
       {showScrollBox && (
         <ScrollBox onClick={handleClickScrollTop}>
