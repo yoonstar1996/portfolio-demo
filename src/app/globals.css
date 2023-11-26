@@ -37,7 +37,7 @@
   --main-font-size-18: 18px;
   --main-font-size-20: 20px;
 
-  --main-nav-border-bottom: 1px solid #111;
+  --main-border-bottom: 1px solid #111;
 
   --main-home-background-color: linear-gradient(
     45deg,
@@ -67,7 +67,7 @@
   --main-font-color: #fff;
   --sub-font-color: #111;
 
-  --main-nav-border-bottom: 1px solid #ddd;
+  --main-border-bottom: 1px solid #ddd;
 
   --main-project-box-shadow: rgba(230, 230, 230, 0.2);
 

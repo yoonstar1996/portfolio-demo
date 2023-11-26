@@ -148,7 +148,7 @@ const ProjectBox = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
-  @media all and (max-width:1280px) {
-    
+  @media all and (max-width:1200px) {
+    justify-content: center;
   }
 `;

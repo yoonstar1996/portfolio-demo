@@ -87,8 +87,8 @@ const ProjectBox = styled.div`
   padding: 48px;
   box-sizing: border-box;
   width: 49%;
-  @media screen and (max-width:1280px) {
-    width: 100%;
+  @media screen and (max-width:1200px) {
+    width: 90%;
   }
 `;
 const ProjectTitle = styled.div`

@@ -36,6 +36,15 @@ export default function ReadMe({
       </Header>
       <Content>
         <Title>(주)셀럽스타즈</Title>
+        <SubTitle>📌 Summary</SubTitle>
+        <SummaryContent>저는 어쩌구 저쩌구 ~</SummaryContent>
+        <SubTitle>🛠️ Technology Stack(s)</SubTitle>
+        <TechSkills>
+          <TechSkill>
+            Frontend : Next.js, Typescript, styled-components
+          </TechSkill>
+          <TechSkill>Backend : Nest.js, prisma</TechSkill>
+        </TechSkills>
       </Content>
     </Container>
   );
@@ -93,5 +102,27 @@ const Content = styled.div`
   box-sizing: border-box;
 `;
 const Title = styled.div`
-  
+  font-size: 28px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+  border-bottom: var(--main-border-bottom);
+  color: var(--main-font-color);
+`;
+
+const SubTitle = styled.div`
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 22px;
+`;
+const SummaryContent = styled.div`
+  margin-bottom: 32px;
+`;
+const TechSkills = styled.ul`
+  /* list-style: circle; */
+  padding-left: 20px;
+`;
+const TechSkill = styled.li`
+  /* list-style: circle; */
+  line-height: 24px;
 `;
