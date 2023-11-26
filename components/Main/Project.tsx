@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import ReadMe from "../ReadMe/ReadMe";
 
 interface ProjectProps {
   isDarkMode: boolean;
@@ -25,8 +26,14 @@ export default function Project({
   projectImageSrc,
   projectSubDescs,
 }: ProjectProps) {
+  const [clickReadMe, setClickReadMe] = useState<boolean>(false);
+  const handleClickREADME = () => {
+    setClickReadMe((pre: boolean) => !pre);
+  };
+
   return (
     <ProjectBox>
+      <ReadMe clickReadMe={clickReadMe} handleClickREADME={handleClickREADME} />
       <ProjectTitle>{projectTitle}</ProjectTitle>
       <ProjectSubTitle>{projectSubTitle}</ProjectSubTitle>
       <ProjectContent>
@@ -37,7 +44,7 @@ export default function Project({
             fill
           />
         </ProjectImageBox>
-        <ReadMeButton>
+        <ReadMeButton onClick={handleClickREADME}>
           <div>자세히보기</div>
           <Icon className="material-symbols-outlined">arrow_right</Icon>
           <div>README</div>
