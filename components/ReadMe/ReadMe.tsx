@@ -55,7 +55,6 @@ const Container = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: rgba(0, 0, 0, 0.5); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,13 +113,16 @@ const SubTitle = styled.div`
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 22px;
+  color: var(--main-font-color);
 `;
 const SummaryContent = styled.div`
   margin-bottom: 32px;
+  color: var(--main-font-color);
 `;
 const TechSkills = styled.ul`
   /* list-style: circle; */
   padding-left: 20px;
+  color: var(--main-font-color);
 `;
 const TechSkill = styled.li`
   /* list-style: circle; */

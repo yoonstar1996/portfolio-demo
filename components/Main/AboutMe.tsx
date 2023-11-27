@@ -90,10 +90,10 @@ export default function AboutMe({
       </SkillBox>
       <div className="소개글">
         <IntroductionText>
-          안녕하세요. 신입 프론트엔드 개발자 <strong>윤경민</strong>입니다.
+          안녕하세요. 프론트엔드 개발자 <strong>윤경민</strong>입니다.
         </IntroductionText>
         <IntroductionText>
-          컴퓨터 공학 전공이 아닌 비전공자로 시작했지만, 작년 8월에 국비지원을
+          컴퓨터 공학 전공이 아닌 비전공자로 시작했지만, 작년 8월 국비지원을
           통해 개발의 세계에 발을 디뎠습니다. 눈에 띄는 노력으로 짧은 기간 동안
           많은 것을 배우고 성장할 수 있었습니다.
         </IntroductionText>
@@ -126,7 +126,7 @@ const Flex = styled.div`
 
 const Container = styled.div`
   height: calc(100% - 58px);
-  background-color: var(--main-background-color-2);
+  background-color: var(--aboutme-background-color);
   padding: 20px 50px;
   box-sizing: border-box;
 `;

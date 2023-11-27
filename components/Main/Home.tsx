@@ -13,7 +13,7 @@ export default function Home({ handleClickAboutMe }: HomeProps) {
     <Container>
       <BackgroundAnimation />
       <Content>
-        <Title>안녕하세요, 신입 개발자 윤경민입니다.</Title>
+        <Title>안녕하세요, 프론트엔드 개발자 윤경민입니다.</Title>
         <HomeButton text="About Me" onClick={handleClickAboutMe} />
       </Content>
     </Container>

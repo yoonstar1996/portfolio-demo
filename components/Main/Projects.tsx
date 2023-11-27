@@ -137,7 +137,7 @@ export default function Projects({
 
 const Container = styled.div`
   height: calc(100% - 58px);
-  background-color: var(--main-background-color-3);
+  background-color: var(--project-background-color);
   padding: 20px 50px ;
   box-sizing: border-box;
 `;

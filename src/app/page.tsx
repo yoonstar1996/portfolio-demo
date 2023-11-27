@@ -64,7 +64,7 @@ export default function ProjectContainer() {
         handleClickAboutMe={handleClickAboutMe}
         handleClickProject={handleClickProject}
       />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
