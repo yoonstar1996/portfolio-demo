@@ -2,15 +2,18 @@
 
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
+import { ProjectInfo } from "../../common/interface/project";
 
 interface ReadMeProps {
   clickReadMe: boolean;
   handleClickREADME: () => void;
+  projectInfo: ProjectInfo;
 }
 
 export default function ReadMe({
   clickReadMe,
   handleClickREADME,
+  projectInfo,
 }: ReadMeProps) {
   const ReadMeRef = useRef<HTMLDivElement>(null);
   const HeaderRef = useRef<HTMLDivElement>(null);
@@ -35,15 +38,17 @@ export default function ReadMe({
         </CloseBtn>
       </Header>
       <Content>
-        <Title>(주)셀럽스타즈</Title>
+        <Title>{projectInfo.projectTitle}</Title>
         <SubTitle>📌 Summary</SubTitle>
-        <SummaryContent>저는 어쩌구 저쩌구 ~</SummaryContent>
+        <SummaryContent>{projectInfo.projectSummary}</SummaryContent>
         <SubTitle>🛠️ Technology Stack(s)</SubTitle>
         <TechSkills>
           <TechSkill>
-            Frontend : Next.js, Typescript, styled-components
+            Frontend : {projectInfo.projectTechStack.frontEnd}
           </TechSkill>
-          <TechSkill>Backend : Nest.js, prisma</TechSkill>
+          <TechSkill>
+            Backend : {projectInfo.projectTechStack.backEnd}
+          </TechSkill>
         </TechSkills>
       </Content>
     </Container>

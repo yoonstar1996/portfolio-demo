@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Title from "../Title/Title";
+import { handleClickUrl } from "../../common/function/handleClick";
 interface AboutMeProps {
   isDarkMode: boolean;
   aboutMeRef: any;
@@ -16,43 +17,6 @@ export default function AboutMe({
   handleClickAboutMe,
 }: AboutMeProps) {
   const myRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const handleClickGithub = () => {
-    window.open("https://github.com/yoonstar1996", "_blank");
-  };
-
-  // useEffect(() => {
-  //   const options = {
-  //     root: null,
-  //     rootMargin: "0px",
-  //     threshold: 0.5, // 변경 가능한 값. 0.5는 요소의 50%가 화면에 나타날 때 이벤트를 발생시킵니다.
-  //   };
-
-  //   const callback = (entries: any[]) => {
-  //     entries.forEach((entry) => {
-  //       // 화면에 보일 때
-  //       if (entry.isIntersecting) {
-  //         setIsVisible(true);
-  //       } else {
-  //         setIsVisible(false);
-  //       }
-  //     });
-  //   };
-
-  //   const observer = new IntersectionObserver(callback, options);
-
-  //   if (myRef.current) {
-  //     observer.observe(myRef.current);
-  //   }
-
-  //   // 옵저버 해제
-  //   return () => {
-  //     if (myRef.current) {
-  //       // eslint-disable-next-line react-hooks/exhaustive-deps
-  //       observer.unobserve(myRef.current);
-  //     }
-  //   };
-  // }, [myRef]);
 
   return (
     <Container ref={aboutMeRef}>
@@ -82,7 +46,9 @@ export default function AboutMe({
               width={30}
               height={30}
             />
-            <GithubText onClick={handleClickGithub}>
+            <GithubText
+              onClick={() => handleClickUrl("https://github.com/yoonstar1996")}
+            >
               https://github.com/yoonstar1996
             </GithubText>
           </Github>
@@ -182,6 +148,7 @@ const Icon = styled.i`
 const GithubText = styled(Text)`
   &:hover {
     cursor: pointer;
+    text-decoration: underline;
   }
 `;
 const SkillBox = styled.div`

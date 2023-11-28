@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Main from "../../components/Main/Main";
 import Nav from "../../components/Nav/Nav";
-import styled from "styled-components";
 
 export default function ProjectContainer() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -64,7 +63,7 @@ export default function ProjectContainer() {
         handleClickAboutMe={handleClickAboutMe}
         handleClickProject={handleClickProject}
       />
-      {/* <Footer /> */}
+      <Footer isDarkMode={isDarkMode} />
     </>
   );
 }

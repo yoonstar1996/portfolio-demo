@@ -4,28 +4,14 @@ import Image from "next/image";
 import React, { useState } from "react";
 import styled from "styled-components";
 import ReadMe from "../ReadMe/ReadMe";
+import { ProjectInfo } from "../../common/interface/project";
 
 interface ProjectProps {
   isDarkMode: boolean;
-  projectTitle: string;
-  projectSubTitle: string;
-  projectImageSrc: any;
-  projectSubDescs: {
-    iconText: string;
-    text: string;
-    url?: string;
-    onClick?: (url: string) => void;
-    descText?: string;
-  }[];
+  projectInfo: ProjectInfo;
 }
 
-export default function Project({
-  isDarkMode,
-  projectTitle,
-  projectSubTitle,
-  projectImageSrc,
-  projectSubDescs,
-}: ProjectProps) {
+export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
   const [clickReadMe, setClickReadMe] = useState<boolean>(false);
   const handleClickREADME = () => {
     setClickReadMe((pre: boolean) => !pre);
@@ -33,14 +19,22 @@ export default function Project({
 
   return (
     <ProjectBox>
-      <ReadMe clickReadMe={clickReadMe} handleClickREADME={handleClickREADME} />
-      <ProjectTitle>{projectTitle}</ProjectTitle>
-      <ProjectSubTitle>{projectSubTitle}</ProjectSubTitle>
+      <ReadMe
+        clickReadMe={clickReadMe}
+        handleClickREADME={handleClickREADME}
+        projectInfo={projectInfo}
+      />
+      <ProjectTitle>{projectInfo.projectTitle}</ProjectTitle>
+      <ProjectSubTitle>{projectInfo.projectSubTitle}</ProjectSubTitle>
       <ProjectContent>
         <ProjectImageBox>
           <Image
-            src={isDarkMode ? projectImageSrc.dark : projectImageSrc.light}
-            alt="celeb_logo"
+            src={
+              isDarkMode
+                ? projectInfo.projectImageSrc.dark
+                : projectInfo.projectImageSrc.light
+            }
+            alt={projectInfo.projectImageAlt}
             fill
           />
         </ProjectImageBox>
@@ -50,7 +44,7 @@ export default function Project({
           <div>README</div>
         </ReadMeButton>
 
-        {projectSubDescs.map((subDesc, index) => (
+        {projectInfo.projectSubDescs.map((subDesc, index) => (
           <SubDesc key={index}>
             <Flex key={index}>
               <SubDescIcon className="material-symbols-outlined">
@@ -87,6 +81,7 @@ const ProjectBox = styled.div`
   padding: 48px;
   box-sizing: border-box;
   width: 49%;
+  word-break: break-all;
   @media screen and (max-width:1200px) {
     width: 90%;
   }
@@ -94,6 +89,7 @@ const ProjectBox = styled.div`
 const ProjectTitle = styled.div`
   color: var(--main-font-color);
   font-size: 1.5rem;
+  font-weight: 600;
   text-align: center;
   padding-bottom: 13px;
 `;
@@ -159,8 +155,6 @@ const SubDesc2 = styled.div`
 `;
 const SubDescUrl = styled(SubDesc2)`
   color: var(--main-url-color);
-  display: flex;
-  flex-wrap: wrap;
   &:hover {
     cursor: pointer;
     text-decoration: underline;
