@@ -60,7 +60,7 @@ const Container = styled.div`
   align-items: center;
   z-index: 11;
   overflow: hidden;
-  transition: top 0.8S ease;
+  transition: top 0.5S ease;
 `;
 const Header = styled.div`
   position: absolute;
@@ -74,7 +74,7 @@ const Header = styled.div`
   background-color: var(--main-readme-header-background-color);
   padding: 0 10px;
   box-shadow: 0 1px 0.3rem hsla(0,0%,80%,.8);
-  transition: top 0.8S ease;
+  transition: top 0.5S ease;
   box-sizing: border-box;
 
 `;

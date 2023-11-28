@@ -36,9 +36,9 @@ export default function Projects({
           projectSubDescs={[
             {
               iconText: "check",
-              text: "주요기능",
+              text: "간단한 소개",
               descText:
-                "자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구~",
+                "(주)셀럽스타즈는 오디션, 캐스팅, 아르바이트 등을 포함한 모델과 배우 캐스팅에 특화된 전문 플랫폼 입니다.",
             },
             {
               iconText: "check",
@@ -62,66 +62,70 @@ export default function Projects({
         />
         <Project
           isDarkMode={isDarkMode}
-          projectTitle="(주)셀럽스타즈"
-          projectSubTitle="2023.03 ~ 2023.08 (3인 프로젝트) (인턴)"
+          projectTitle="SGT Market"
+          projectSubTitle="2022.09 ~ 2022.10 (4인 프로젝트)"
           projectImageSrc={{
-            dark: "/projects/celeb-logo3.png",
-            light: "/projects/celeb-logo1.png",
+            dark: "/projects/sgt-banner.jpg",
+            light: "/projects/sgt-banner.jpg",
           }}
           projectSubDescs={[
             {
               iconText: "check",
-              text: "주요기능",
+              text: "간단한 소개",
               descText:
-                "자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구~",
+                "SGT Market은 중고거래 사이트이자 나눔을 하는 사이트입니다.",
             },
             {
               iconText: "check",
               text: "Github",
-              url: "https://github.com/yoonstar1996/celebstars",
+              url: "https://github.com/yoonstar1996/kdt--2project",
               onClick: handleClickUrl,
             },
-            {
-              iconText: "check",
-              text: "URL",
-              url: "https://celebstars.co.kr/",
-              onClick: handleClickUrl,
-            },
+            // {
+            //   iconText: "check",
+            //   text: "URL",
+            //   url: "https://celebstars.co.kr/",
+            //   onClick: handleClickUrl,
+            // },
             {
               iconText: "check",
               text: "FrontEnd",
-              descText: "Next.js, Typescript, Redux, styled-components",
+              descText: "HTML, CSS, Javascript, jQuery, axios",
             },
-            { iconText: "check", text: "BackEnd", descText: "Nest.js, prisma" },
+            {
+              iconText: "check",
+              text: "BackEnd",
+              descText: "Node.js, express",
+            },
           ]}
         />
         <Project
           isDarkMode={isDarkMode}
-          projectTitle="(주)셀럽스타즈"
-          projectSubTitle="2023.03 ~ 2023.08 (3인 프로젝트) (인턴)"
+          projectTitle="Dingon"
+          projectSubTitle="2022.10 ~ 2022.19 (5인 프로젝트)"
           projectImageSrc={{
-            dark: "/projects/celeb-logo3.png",
-            light: "/projects/celeb-logo1.png",
+            dark: "/projects/dingon-banner.png",
+            light: "/projects/dingon-banner.png",
           }}
           projectSubDescs={[
             {
               iconText: "check",
-              text: "주요기능",
+              text: "간단한 소개",
               descText:
-                "자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구자주 부르는 어쩌구~",
+                "dingon은 커뮤니티 사이트 입니다. 자신만의 생각을 적고 남들과 공유해보세요.",
             },
             {
               iconText: "check",
               text: "Github",
-              url: "https://github.com/yoonstar1996/celebstars",
+              url: "https://github.com/yoonstar1996/dingon/tree/main",
               onClick: handleClickUrl,
             },
-            {
-              iconText: "check",
-              text: "URL",
-              url: "https://celebstars.co.kr/",
-              onClick: handleClickUrl,
-            },
+            // {
+            //   iconText: "check",
+            //   text: "URL",
+            //   url: "https://celebstars.co.kr/",
+            //   onClick: handleClickUrl,
+            // },
             {
               iconText: "check",
               text: "FrontEnd",

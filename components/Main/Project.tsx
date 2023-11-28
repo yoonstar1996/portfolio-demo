@@ -132,7 +132,7 @@ const Icon = styled.i`
 const Flex = styled.div`
   display: flex;
   align-items: center;
-  min-width: 110px;
+  min-width: 130px;
   color: var(--main-font-color);
   @media all and (max-width:767px) {
     margin-bottom: 5px;

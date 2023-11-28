@@ -21,45 +21,45 @@ export default function AboutMe({
     window.open("https://github.com/yoonstar1996", "_blank");
   };
 
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5, // 변경 가능한 값. 0.5는 요소의 50%가 화면에 나타날 때 이벤트를 발생시킵니다.
-    };
+  // useEffect(() => {
+  //   const options = {
+  //     root: null,
+  //     rootMargin: "0px",
+  //     threshold: 0.5, // 변경 가능한 값. 0.5는 요소의 50%가 화면에 나타날 때 이벤트를 발생시킵니다.
+  //   };
 
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
-        // 화면에 보일 때
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      });
-    };
+  //   const callback = (entries: any[]) => {
+  //     entries.forEach((entry) => {
+  //       // 화면에 보일 때
+  //       if (entry.isIntersecting) {
+  //         setIsVisible(true);
+  //       } else {
+  //         setIsVisible(false);
+  //       }
+  //     });
+  //   };
 
-    const observer = new IntersectionObserver(callback, options);
+  //   const observer = new IntersectionObserver(callback, options);
 
-    if (myRef.current) {
-      observer.observe(myRef.current);
-    }
+  //   if (myRef.current) {
+  //     observer.observe(myRef.current);
+  //   }
 
-    // 옵저버 해제
-    return () => {
-      if (myRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        observer.unobserve(myRef.current);
-      }
-    };
-  }, [myRef]);
+  //   // 옵저버 해제
+  //   return () => {
+  //     if (myRef.current) {
+  //       // eslint-disable-next-line react-hooks/exhaustive-deps
+  //       observer.unobserve(myRef.current);
+  //     }
+  //   };
+  // }, [myRef]);
 
   return (
     <Container ref={aboutMeRef}>
       <Title text="About Me" onClick={handleClickAboutMe} />
       <Information ref={myRef}>
         <ImageContainer>
-          <Image src="/mypicture.jpg" alt="my_picture" fill />
+          <Image src="/aboutMe/mypicture.jpg" alt="my_picture" fill />
         </ImageContainer>
         <Contact>
           <Name>윤경민</Name>
@@ -73,7 +73,11 @@ export default function AboutMe({
           </Email>
           <Github>
             <Image
-              src={isDarkMode ? "/github-mark-white.png" : "/github-mark.png"}
+              src={
+                isDarkMode
+                  ? "/aboutMe/github-mark-white.png"
+                  : "/aboutMe/github-mark.png"
+              }
               alt="github_logo"
               width={30}
               height={30}
@@ -85,8 +89,18 @@ export default function AboutMe({
         </Contact>
       </Information>
       <SkillBox>
-        <Image src={"/html.png"} alt="html_logo" width={100} height={100} />
-        <Image src={"/css.png"} alt="html_logo" width={100} height={100} />
+        <Image
+          src={"/aboutMe/html.png"}
+          alt="html_logo"
+          width={100}
+          height={100}
+        />
+        <Image
+          src={"/aboutMe/css.png"}
+          alt="html_logo"
+          width={100}
+          height={100}
+        />
       </SkillBox>
       <div className="소개글">
         <IntroductionText>

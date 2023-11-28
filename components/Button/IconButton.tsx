@@ -8,6 +8,10 @@ interface IconButtonProps {
   onClick?: () => void;
 }
 
+interface ButtonProps {
+  isdarkmode: string;
+}
+
 export default function IconButton({ text, onClick }: IconButtonProps) {
   const [darkMode, setIsDarkMode] = useState<boolean>(false);
 
@@ -27,7 +31,7 @@ export default function IconButton({ text, onClick }: IconButtonProps) {
   );
 }
 
-const Button = styled.button<{ isdarkmode: string }>`
+const Button = styled.button<ButtonProps>`
   color: var(--main-font-color);
   font-size: var(--main-font-size-20);
   border: none;
@@ -35,6 +39,5 @@ const Button = styled.button<{ isdarkmode: string }>`
   &:hover {
     cursor: pointer;
     color: ${(props) => (props.isdarkmode === "true" ? "#5448ff" : "#ffbf48")};
-
   }
 `;
