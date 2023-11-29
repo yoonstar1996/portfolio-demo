@@ -105,7 +105,7 @@ const ProjectContent = styled.div`
 const ProjectImageBox = styled.div`
   position: relative;
   width: 100%;
-  height: 130px;
+  height: 150px;
   margin-bottom: 15px;
 `;
 const ReadMeButton = styled.div`

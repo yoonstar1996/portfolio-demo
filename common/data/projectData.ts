@@ -64,7 +64,7 @@ export const sgtProject = {
     {
       iconText: "check",
       text: "FrontEnd",
-      descText: "HTML, CSS, Javascript, jQuery, axios",
+      descText: "Javascript, jQuery, axios",
     },
     {
       iconText: "check",
@@ -74,7 +74,7 @@ export const sgtProject = {
   ],
   projectSummary: "sgt 서머리",
   projectTechStack: {
-    frontEnd: "HTML, CSS, Javascript, jQuery, axios",
+    frontEnd: "Javascript, jQuery, axios",
     backEnd: "Node.js, express",
   },
 };
@@ -142,7 +142,7 @@ export const beerModeProject = {
     {
       iconText: "check",
       text: "FrontEnd",
-      descText: "HTML, CSS, Javascript, jQuery, bootstrap",
+      descText: "Javascript, jQuery, bootstrap",
     },
     {
       iconText: "check",
@@ -152,7 +152,7 @@ export const beerModeProject = {
   ],
   projectSummary: "비어모드 서머리",
   projectTechStack: {
-    frontEnd: "HTML, CSS, Javascript, jQuery, bootstrap",
+    frontEnd: "Javascript, jQuery, bootstrap",
     backEnd: "Node.js, ejs",
   },
 };
@@ -180,7 +180,7 @@ export const starbucksProject = {
     {
       iconText: "check",
       text: "FrontEnd",
-      descText: "HTML, CSS, Javascript, jQuery, bootstrap",
+      descText: "Javascript, jQuery, bootstrap",
     },
     {
       iconText: "check",
@@ -190,7 +190,7 @@ export const starbucksProject = {
   ],
   projectSummary: "스타벅스 서머리",
   projectTechStack: {
-    frontEnd: "HTML, CSS, Javascript, jQuery, bootstrap",
+    frontEnd: "Javascript, jQuery, bootstrap",
     backEnd: "Node.js, ejs",
   },
 };
@@ -217,7 +217,7 @@ export const chatProject = {
     {
       iconText: "check",
       text: "FrontEnd",
-      descText: "HTML, CSS, Javascript, jQuery, bootstrap",
+      descText: "Javascript, jQuery, bootstrap",
     },
     {
       iconText: "check",
@@ -225,9 +225,15 @@ export const chatProject = {
       descText: "Node.js, ejs",
     },
   ],
-  projectSummary: "채팅 서머리",
+  projectSummary:
+    "socket.io를 활용하여 간단한 채팅 기능과 DM기능이 있는 사이트를 만들어봤습니다. 코딩온(국비지원 학원)에서 백엔드 수업이 끝난 후, socket.io를 활용하면 실시간 채팅 사이트를 만들 수 있다는 얘기를 듣고, 가볍게 만든 채팅 프로젝트 입니다.",
+  projectMainFunction: [
+    "닉네임을 입력하여, 채팅방에 입장하기",
+    "닉네임 중복 검사",
+    "dm 기능",
+  ],
   projectTechStack: {
-    frontEnd: "HTML, CSS, Javascript, jQuery",
+    frontEnd: "Javascript, jQuery",
     backEnd: "Node.js, ejs, socket.io",
   },
 };

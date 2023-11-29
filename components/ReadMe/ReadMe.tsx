@@ -41,6 +41,12 @@ export default function ReadMe({
         <Title>{projectInfo.projectTitle}</Title>
         <SubTitle>📌 Summary</SubTitle>
         <SummaryContent>{projectInfo.projectSummary}</SummaryContent>
+        <SubTitle>* 주요기능</SubTitle>
+        <MainFunctions>
+          {projectInfo.projectMainFunction.map((mainFunction, index) => (
+            <MainFunction key={index}>{mainFunction}</MainFunction>
+          ))}
+        </MainFunctions>
         <SubTitle>🛠️ Technology Stack(s)</SubTitle>
         <TechSkills>
           <TechSkill>
@@ -123,13 +129,20 @@ const SubTitle = styled.div`
 const SummaryContent = styled.div`
   margin-bottom: 32px;
   color: var(--main-font-color);
+  line-height: 28px;
+`;
+const MainFunctions = styled.ul`
+  padding-left: 20px;
+  color: var(--main-font-color);
+  margin-bottom: 32px;
+`;
+const MainFunction = styled.li`
+  line-height: 24px;
 `;
 const TechSkills = styled.ul`
-  /* list-style: circle; */
   padding-left: 20px;
   color: var(--main-font-color);
 `;
 const TechSkill = styled.li`
-  /* list-style: circle; */
   line-height: 24px;
 `;

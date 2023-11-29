@@ -14,6 +14,7 @@ export interface ProjectInfo {
   }[];
   projectImageAlt: string;
   projectSummary: string;
+  projectMainFunction: string[];
   projectTechStack: {
     frontEnd: string;
     backEnd: string;
