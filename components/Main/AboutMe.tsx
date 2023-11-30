@@ -109,21 +109,41 @@ const Container = styled.div`
   background-color: var(--aboutme-background-color);
   padding: 20px 50px;
   box-sizing: border-box;
+  @media all and (max-width:800px) {
+    padding: 20px;
+  }
 `;
 
 const Information = styled.div`
-  /* margin-top: 58px; */
   display: flex;
   align-items: center;
   justify-content: center;
+  @media all and (max-width:600px) {
+    flex-direction: column;
+  }
 `;
 const ImageContainer = styled.div`
   position: relative;
-  width: 400px;
+  width: 100%;
+  max-width:400px;
   height: 400px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 50px;
+  @media all and (max-width:1200px) {
+    max-width:300px;
+    height: 300px;
+  }
+  @media all and (max-width:800px) {
+    max-width:200px;
+    min-width: 200px;
+    height: 200px;
+    margin-right: 30px;
+  }
+  @media all and (max-width:600px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 `;
 const Contact = styled.div`  
 `;
@@ -131,6 +151,9 @@ const Name = styled.div`
   font-size: 2.5rem;
   color: var(--main-font-color);
   margin-bottom: 25px;
+  @media all and (max-width:800px) {
+    font-size: 2rem;
+  }
 `;
 const Phone = styled(Flex)`
   color: var(--main-font-color);
@@ -139,11 +162,17 @@ const Phone = styled(Flex)`
 const Text = styled.div`
   font-size: 1.2rem;
   margin-left: 10px;
+  @media all and (max-width:800px) {
+    font-size: 1.1rem;
+  }
 `;
 const Email = styled(Phone)``;
 const Github = styled(Email)``;
 const Icon = styled.i`
   font-size: 30px;
+  @media all and (max-width:800px) {
+    font-size: 26px;
+  }
 `;
 const GithubText = styled(Text)`
   &:hover {

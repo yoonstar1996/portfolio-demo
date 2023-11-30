@@ -35,6 +35,7 @@ export const celebProject = {
     { iconText: "check", text: "BackEnd", descText: "Nest.js, prisma" },
   ],
   projectSummary: "셀럽 서머리",
+  projectMainFunction: ["주요 기능1", "주요 기능2"],
   projectTechStack: {
     frontEnd: "Next.js, Typescript, Redux, styled-components",
     backEnd: "Nest.js, prisma",
@@ -73,6 +74,7 @@ export const sgtProject = {
     },
   ],
   projectSummary: "sgt 서머리",
+  projectMainFunction: ["주요 기능1", "주요 기능2"],
   projectTechStack: {
     frontEnd: "Javascript, jQuery, axios",
     backEnd: "Node.js, express",
@@ -112,6 +114,7 @@ export const dingonProject = {
     },
   ],
   projectSummary: "딩온 서머리",
+  projectMainFunction: ["주요 기능1", "주요 기능2"],
   projectTechStack: {
     frontEnd: "React, axios, mui",
     backEnd: "Node.js, express",
@@ -151,6 +154,7 @@ export const beerModeProject = {
     },
   ],
   projectSummary: "비어모드 서머리",
+  projectMainFunction: ["주요 기능1", "주요 기능2"],
   projectTechStack: {
     frontEnd: "Javascript, jQuery, bootstrap",
     backEnd: "Node.js, ejs",
@@ -189,6 +193,7 @@ export const starbucksProject = {
     },
   ],
   projectSummary: "스타벅스 서머리",
+  projectMainFunction: ["주요 기능1", "주요 기능2"],
   projectTechStack: {
     frontEnd: "Javascript, jQuery, bootstrap",
     backEnd: "Node.js, ejs",
