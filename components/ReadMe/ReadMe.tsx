@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { ProjectInfo } from "../../common/interface/project";
+import Image from "next/image";
 
 interface ReadMeProps {
   clickReadMe: boolean;
@@ -39,14 +40,28 @@ export default function ReadMe({
       </Header>
       <Content>
         <Title>{projectInfo.projectTitle}</Title>
-        <SubTitle>📌 Summary</SubTitle>
+        <SubTitle>📌 담당 페이지</SubTitle>
         <SummaryContent>{projectInfo.projectSummary}</SummaryContent>
-        <SubTitle>* 주요기능</SubTitle>
-        <MainFunctions>
-          {projectInfo.projectMainFunction.map((mainFunction, index) => (
-            <MainFunction key={index}>{mainFunction}</MainFunction>
-          ))}
-        </MainFunctions>
+        {projectInfo.projectMainFunction && (
+          <>
+            <SubTitle>* 주요기능</SubTitle>
+            {projectInfo.projectMainFunction.map((item, index) => (
+              <MainFunctionContent key={index}>
+                {index % 2 === 0 ? (
+                  // 주요 기능 렌더링
+                  <MainFunctions>
+                    <MainFunction>{item}</MainFunction>
+                  </MainFunctions>
+                ) : (
+                  // 이미지 렌더링
+                  <ProjectImageBox>
+                    <StyledImage src={item} alt={`image_${index}`} fill />
+                  </ProjectImageBox>
+                )}
+              </MainFunctionContent>
+            ))}
+          </>
+        )}
         <SubTitle>🛠️ Technology Stack(s)</SubTitle>
         <TechSkills>
           <TechSkill>
@@ -63,6 +78,7 @@ export default function ReadMe({
 
 const Container = styled.div`
   position: fixed;
+  top:0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -76,7 +92,7 @@ const Container = styled.div`
 const Header = styled.div`
   position: absolute;
   left: 0;
-  z-index: 11;
+  z-index: 12;
   width: 100%;
   height: 58px;
   display: flex;
@@ -101,15 +117,23 @@ const CloseBtn = styled.i`
   }
 `;
 const Content = styled.div`
-  position: absolute;
-  top: 58px;
+  position: relative;
+  top: 0px;
   left: 0;
-  width: 100%;
   z-index: 11;
-  height: 100%;
-  padding: 18px;
+  overflow-y: auto;
+  padding: 18px 150px;
+  width: 100%;
+  height: calc(100% - 58px);
+  margin-top: 58px;
   background-color: var(--main-background-color-2);
   box-sizing: border-box;
+  @media all and (max-width:1200px) {
+    padding: 18px 100px;
+  }
+  @media all and (max-width:767px) {
+    padding: 18px 50px;
+  }
 `;
 const Title = styled.div`
   font-size: 28px;
@@ -134,11 +158,23 @@ const SummaryContent = styled.div`
 const MainFunctions = styled.ul`
   padding-left: 20px;
   color: var(--main-font-color);
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 `;
 const MainFunction = styled.li`
-  line-height: 24px;
+  line-height: 20px;
 `;
+const MainFunctionContent = styled.div`
+
+`;
+const ProjectImageBox = styled.div`
+  position: relative;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  margin-bottom: 32px;
+`;
+const StyledImage = styled(Image)``;
 const TechSkills = styled.ul`
   padding-left: 20px;
   color: var(--main-font-color);
