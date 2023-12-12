@@ -79,7 +79,7 @@ export default function AboutMe({
         </IntroductionText>
         <IntroductionText>
           (주)셀럽스타즈에서의 프론트엔드 개발자 인턴 경험을 통해 실무에서의
-          도전과 성취를 맛보았습니다. 현재는 이러한 경험과 기술을 총망라하여
+          도전과 성취를 맛보았습니다. 현재는 이러한 경험과 기술을 총 망라하여
           나만의 포트폴리오를 작성 중이며, 끊임없는 자기개발을 통해 더 나은
           개발자로 성장하기 위해 노력하고 있습니다.
         </IntroductionText>

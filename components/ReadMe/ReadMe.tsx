@@ -25,6 +25,13 @@ export default function ReadMe({
     if (HeaderRef.current) {
       HeaderRef.current.style.top = clickReadMe ? "0" : "-58px";
     }
+    const body = document.body;
+    body.style.overflow = clickReadMe ? "hidden" : "auto";
+
+    // 컴포넌트 언마운트 시에 스타일 초기화
+    return () => {
+      body.style.overflow = "auto";
+    };
   }, [clickReadMe]);
 
   return (
@@ -40,28 +47,40 @@ export default function ReadMe({
       </Header>
       <Content>
         <Title>{projectInfo.projectTitle}</Title>
-        <SubTitle>📌 담당 페이지</SubTitle>
-        <SummaryContent>{projectInfo.projectSummary}</SummaryContent>
+        {/* <SubTitle>📌 담당 페이지</SubTitle>
+        <SummaryContent>{projectInfo.projectSummary}</SummaryContent> */}
         {projectInfo.projectMainFunction && (
           <>
-            <SubTitle>* 주요기능</SubTitle>
+            {/* <SubTitle>* 주요기능</SubTitle> */}
+            <SubTitle>📌 주요기능</SubTitle>
             {projectInfo.projectMainFunction.map((item, index) => (
               <MainFunctionContent key={index}>
-                {index % 2 === 0 ? (
-                  // 주요 기능 렌더링
-                  <MainFunctions>
-                    <MainFunction>{item}</MainFunction>
-                  </MainFunctions>
-                ) : (
-                  // 이미지 렌더링
+                {item.charAt(0) === "/" ? (
                   <ProjectImageBox>
                     <StyledImage src={item} alt={`image_${index}`} fill />
                   </ProjectImageBox>
+                ) : item.charAt(0) === "@" ? (
+                  <SubFunctions>
+                    <SubFunction>{item.substring(1)}</SubFunction>
+                  </SubFunctions>
+                ) : item.charAt(0) === "#" ? (
+                  <Sub2Functions>
+                    <Sub2Function>{item.substring(1)}</Sub2Function>
+                  </Sub2Functions>
+                ) : item.charAt(0) === "$" ? (
+                  <Sub3Functions>
+                    <Sub3Function>{item.substring(1)}</Sub3Function>
+                  </Sub3Functions>
+                ) : (
+                  <MainFunctions>
+                    <MainFunction>{item}</MainFunction>
+                  </MainFunctions>
                 )}
               </MainFunctionContent>
             ))}
           </>
         )}
+
         <SubTitle>🛠️ Technology Stack(s)</SubTitle>
         <TechSkills>
           <TechSkill>
@@ -162,6 +181,29 @@ const MainFunctions = styled.ul`
 `;
 const MainFunction = styled.li`
   line-height: 20px;
+  font-weight: 600;
+`;
+const SubFunctions = styled(MainFunctions)`
+  padding-left: 35px;
+`;
+const SubFunction = styled.li`
+  list-style: circle;
+  line-height: 20px;
+  font-weight: 500;
+`;
+const Sub2Functions = styled(MainFunctions)`
+  padding-left: 50px;
+`;
+const Sub2Function = styled(SubFunction)`
+  list-style: square;
+  font-weight: 500;
+`;
+const Sub3Functions = styled(MainFunctions)`
+  padding-left: 15px;
+`;
+const Sub3Function = styled(SubFunction)`
+  list-style: none;
+  font-weight: 600;
 `;
 const MainFunctionContent = styled.div`
 
@@ -173,6 +215,7 @@ const ProjectImageBox = styled.div`
   max-width: 400px;
   height: 400px;
   margin-bottom: 32px;
+  margin-left: 20px;
 `;
 const StyledImage = styled(Image)``;
 const TechSkills = styled.ul`
