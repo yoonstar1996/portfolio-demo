@@ -44,6 +44,9 @@ const Container = styled.div`
   background-color: var(--project-background-color);
   padding: 20px 50px 100px;
   box-sizing: border-box;
+  @media all and (max-width:767px) {
+    padding: 20px 20px 80px;
+  }
 `;
 
 const ProjectBox = styled.div`

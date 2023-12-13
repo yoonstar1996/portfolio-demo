@@ -21,6 +21,7 @@ export default function ReadMe({
   useEffect(() => {
     if (ReadMeRef.current) {
       ReadMeRef.current.style.top = clickReadMe ? "0" : "-100%";
+      ReadMeRef.current.style.height = clickReadMe ? "100%" : "-0%";
     }
     if (HeaderRef.current) {
       HeaderRef.current.style.top = clickReadMe ? "0" : "-58px";
@@ -97,10 +98,10 @@ export default function ReadMe({
 
 const Container = styled.div`
   position: fixed;
-  top:0;
+  top: -100%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,6 +111,7 @@ const Container = styled.div`
 `;
 const Header = styled.div`
   position: absolute;
+  top: -58px;
   left: 0;
   z-index: 12;
   width: 100%;
@@ -151,7 +153,7 @@ const Content = styled.div`
     padding: 18px 100px;
   }
   @media all and (max-width:767px) {
-    padding: 18px 50px;
+    padding: 18px 40px;
   }
 `;
 const Title = styled.div`

@@ -13,7 +13,12 @@ export default function Home({ handleClickAboutMe }: HomeProps) {
     <Container>
       <BackgroundAnimation />
       <Content>
-        <Title>안녕하세요, 프론트엔드 개발자 윤경민입니다.</Title>
+        <Title>안녕하세요.</Title>
+        <Title>성장 가능성이 많은 프론트엔드 개발자입니다.</Title>
+        <Title>
+          예민하고 꼼꼼한, 그리고 남에게 피해 주는 것을 싫어하는 성격이 저의
+          장점입니다.
+        </Title>
         <HomeButton text="About Me" onClick={handleClickAboutMe} />
       </Content>
     </Container>
@@ -25,6 +30,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media all and (max-width:787px) {
+    padding: 0 20px;
+  }
 `;
 
 const animation = keyframes`
@@ -62,11 +70,14 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2rem;
-  margin-bottom: 30px;
-  /* color: var(--main-font-color); */
+  font-size: 1.2rem;
+  margin-bottom: 20px;
   color: #fff;
-`;
+  @media all and (max-width:767px) {
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+ `;
 
 const Subtitle = styled.h2`
   font-size: 1.5em;

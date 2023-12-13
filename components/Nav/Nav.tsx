@@ -64,15 +64,13 @@ const Logo = styled.div`
     cursor: pointer;
     color: #ff4848;
   }
+  @media all and (max-width:767px) {
+    font-size: 18px;
+  }
 `;
 const Menu = styled.ul`
   display: flex;
   align-items: center;
 `;
 const SideMenu = styled(Menu)`
-`;
-const ImageContainer = styled.div`
-  position: relative;
-  width: 400px;
-  height: 100%;
 `;

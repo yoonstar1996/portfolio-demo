@@ -280,7 +280,7 @@ export const beerModeProject = {
   projectSummary: "비어모드 서머리",
   projectMainFunction: [
     "반응형 웹 페이지",
-    "/projects/beermode/beermode-info.gif",
+    "/projects/beermode/beermode-Info.gif",
     "내가 누른 정보를 화면 위쪽에 배치하여 눈에 쉽게 들어오도록 함",
     "ejs파일로 분류해 둔 나라 별 맥주를 나라를 클릭함에 따라 include하여 적용",
     "나라 별 리스트에 active를 걸어두어 현재 보고 있는 나라가 어디인지 알기 쉽도록 함",

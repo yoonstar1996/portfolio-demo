@@ -85,6 +85,9 @@ const ProjectBox = styled.div`
   @media screen and (max-width:1200px) {
     width: 90%;
   }
+  @media all and (max-width:767px) {
+    padding: 36px;
+  }
 `;
 const ProjectTitle = styled.div`
   color: var(--main-font-color);
@@ -121,6 +124,9 @@ const ReadMeButton = styled.div`
     cursor: pointer;
     filter: brightness(90%);
   };
+  @media all and (max-width:767px) {
+    font-size: 18px;
+  }
 `;
 const Icon = styled.i`
   font-size: 24px;
@@ -151,7 +157,7 @@ const SubDescIcon = styled.i`
 `;
 const SubDesc2 = styled.div`
   color: var(--main-font-color);
-  line-height: 20px;
+  line-height: 25px;
 `;
 const SubDescUrl = styled(SubDesc2)`
   color: var(--main-url-color);

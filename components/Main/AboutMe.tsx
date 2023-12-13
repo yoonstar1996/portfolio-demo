@@ -5,6 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Title from "../Title/Title";
 import { handleClickUrl } from "../../common/function/handleClick";
+import TechStack from "../Image/TechStack";
 interface AboutMeProps {
   isDarkMode: boolean;
   aboutMeRef: any;
@@ -23,7 +24,7 @@ export default function AboutMe({
       <Title text="About Me" onClick={handleClickAboutMe} />
       <Information ref={myRef}>
         <ImageContainer>
-          <Image src="/aboutMe/mypicture.jpg" alt="my_picture" fill />
+          <Image src="/aboutMe/myPicture.jpg" alt="my_picture" fill />
         </ImageContainer>
         <Contact>
           <Name>윤경민</Name>
@@ -54,21 +55,39 @@ export default function AboutMe({
           </Github>
         </Contact>
       </Information>
+      <TechStacksText>🛠️ TechStacks</TechStacksText>
       <SkillBox>
-        <Image
-          src={"/aboutMe/html.png"}
-          alt="html_logo"
-          width={100}
-          height={100}
-        />
-        <Image
-          src={"/aboutMe/css.png"}
-          alt="html_logo"
-          width={100}
-          height={100}
-        />
+        <SkillText>Frontend : </SkillText>
+        <TechStack src="/stacks/front/html.svg" alt="html" />
+        <TechStack src="/stacks/front/css.svg" alt="css" />
+        <TechStack src="/stacks/front/javascript.svg" alt="javascript" />
+        <TechStack src="/stacks/front/jQuery.svg" alt="jQuery" />
+        <TechStack src="/stacks/front/typescript.svg" alt="typescript" />
+        <TechStack src="/stacks/front/react.svg" alt="react" />
+        <TechStack src="/stacks/front/next.svg" alt="next" />
+        <TechStack src="/stacks/front/redux.svg" alt="redux" />
+        <TechStack src="/stacks/front/sass.svg" alt="sass" />
+        <TechStack src="/stacks/front/bootstrap.svg" alt="bootstrap" />
       </SkillBox>
-      <div className="소개글">
+      <SkillBox>
+        <SkillText>Backend : </SkillText>
+        <TechStack src="/stacks/back/nodejs.svg" alt="nodejs" />
+        <TechStack src="/stacks/back/express.svg" alt="express" />
+      </SkillBox>
+      <SkillBox>
+        <SkillText>Version Control : </SkillText>
+        <TechStack src="/stacks/versionControl/git.svg" alt="git" />
+        <TechStack src="/stacks/versionControl/github.svg" alt="github" />
+      </SkillBox>
+      <SkillBox>
+        <SkillText>etc : </SkillText>
+        <TechStack src="/stacks/deployment/vercel.svg" alt="vercel" />
+        <TechStack src="/stacks/communication/figma.svg" alt="figma" />
+        <TechStack src="/stacks/communication/notion.svg" alt="notion" />
+        <TechStack src="/stacks/communication/slack.svg" alt="slack" />
+        <TechStack src="/stacks/communication/vscode.svg" alt="vscode" />
+      </SkillBox>
+      {/* <div className="소개글">
         <IntroductionText>
           안녕하세요. 프론트엔드 개발자 <strong>윤경민</strong>입니다.
         </IntroductionText>
@@ -95,7 +114,7 @@ export default function AboutMe({
           노력하겠습니다.
         </IntroductionText>
         <IntroductionText> 감사합니다.</IntroductionText>
-      </div>
+      </div> */}
     </Container>
   );
 }
@@ -180,9 +199,23 @@ const GithubText = styled(Text)`
     text-decoration: underline;
   }
 `;
+const TechStacksText = styled.div`
+  font-size: 20px;
+  color: var(--main-font-color);
+  `;
 const SkillBox = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  margin: 10px 0;
+  gap: 5px;
+  @media all and (max-width:767px) {
+    margin: 10px 0 15px;
+    gap: 8px;
+  }
+`;
+const SkillText = styled.div`
+  color: var(--main-font-color);
 `;
 const IntroductionText = styled.div`
   font-size: 1.2rem;

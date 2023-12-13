@@ -26,6 +26,8 @@ const Button = styled.button`
   &:hover {
     cursor: pointer;
     color: #ff4848;
-
+  }
+  @media all and (max-width:767px) {
+    font-size: 15px;
   }
 `;
