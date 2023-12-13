@@ -21,7 +21,6 @@ export default function ReadMe({
   useEffect(() => {
     if (ReadMeRef.current) {
       ReadMeRef.current.style.top = clickReadMe ? "0" : "-100%";
-      ReadMeRef.current.style.height = clickReadMe ? "100%" : "-0%";
     }
     if (HeaderRef.current) {
       HeaderRef.current.style.top = clickReadMe ? "0" : "-58px";
@@ -53,7 +52,7 @@ export default function ReadMe({
         {projectInfo.projectMainFunction && (
           <>
             {/* <SubTitle>* 주요기능</SubTitle> */}
-            <SubTitle>📌 주요기능</SubTitle>
+            <SubTitle>📄 주요기능</SubTitle>
             {projectInfo.projectMainFunction.map((item, index) => (
               <MainFunctionContent key={index}>
                 {item.charAt(0) === "/" ? (
@@ -101,7 +100,7 @@ const Container = styled.div`
   top: -100%;
   left: 0;
   width: 100%;
-  height: 0%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,8 +167,11 @@ const Title = styled.div`
 const SubTitle = styled.div`
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 22px;
+  margin: 30px 0 15px;
   color: var(--main-font-color);
+  @media all and (max-width:767px) {
+    font-size: 20px;
+  }
 `;
 const SummaryContent = styled.div`
   margin-bottom: 32px;

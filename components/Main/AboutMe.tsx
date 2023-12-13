@@ -55,38 +55,40 @@ export default function AboutMe({
           </Github>
         </Contact>
       </Information>
-      <TechStacksText>🛠️ TechStacks</TechStacksText>
-      <SkillBox>
-        <SkillText>Frontend : </SkillText>
-        <TechStack src="/stacks/front/html.svg" alt="html" />
-        <TechStack src="/stacks/front/css.svg" alt="css" />
-        <TechStack src="/stacks/front/javascript.svg" alt="javascript" />
-        <TechStack src="/stacks/front/jQuery.svg" alt="jQuery" />
-        <TechStack src="/stacks/front/typescript.svg" alt="typescript" />
-        <TechStack src="/stacks/front/react.svg" alt="react" />
-        <TechStack src="/stacks/front/next.svg" alt="next" />
-        <TechStack src="/stacks/front/redux.svg" alt="redux" />
-        <TechStack src="/stacks/front/sass.svg" alt="sass" />
-        <TechStack src="/stacks/front/bootstrap.svg" alt="bootstrap" />
-      </SkillBox>
-      <SkillBox>
-        <SkillText>Backend : </SkillText>
-        <TechStack src="/stacks/back/nodejs.svg" alt="nodejs" />
-        <TechStack src="/stacks/back/express.svg" alt="express" />
-      </SkillBox>
-      <SkillBox>
-        <SkillText>Version Control : </SkillText>
-        <TechStack src="/stacks/versionControl/git.svg" alt="git" />
-        <TechStack src="/stacks/versionControl/github.svg" alt="github" />
-      </SkillBox>
-      <SkillBox>
-        <SkillText>etc : </SkillText>
-        <TechStack src="/stacks/deployment/vercel.svg" alt="vercel" />
-        <TechStack src="/stacks/communication/figma.svg" alt="figma" />
-        <TechStack src="/stacks/communication/notion.svg" alt="notion" />
-        <TechStack src="/stacks/communication/slack.svg" alt="slack" />
-        <TechStack src="/stacks/communication/vscode.svg" alt="vscode" />
-      </SkillBox>
+      <TechStackBox>
+        <TechStacksText>🛠️ TechStacks</TechStacksText>
+        <SkillBox>
+          <SkillText>Frontend : </SkillText>
+          <TechStack src="/stacks/front/html.svg" alt="html" />
+          <TechStack src="/stacks/front/css.svg" alt="css" />
+          <TechStack src="/stacks/front/javascript.svg" alt="javascript" />
+          <TechStack src="/stacks/front/jQuery.svg" alt="jQuery" />
+          <TechStack src="/stacks/front/typescript.svg" alt="typescript" />
+          <TechStack src="/stacks/front/react.svg" alt="react" />
+          <TechStack src="/stacks/front/next.svg" alt="next" />
+          <TechStack src="/stacks/front/redux.svg" alt="redux" />
+          <TechStack src="/stacks/front/sass.svg" alt="sass" />
+          <TechStack src="/stacks/front/bootstrap.svg" alt="bootstrap" />
+        </SkillBox>
+        <SkillBox>
+          <SkillText>Backend : </SkillText>
+          <TechStack src="/stacks/back/nodejs.svg" alt="nodejs" />
+          <TechStack src="/stacks/back/express.svg" alt="express" />
+        </SkillBox>
+        <SkillBox>
+          <SkillText>Version Control : </SkillText>
+          <TechStack src="/stacks/versionControl/git.svg" alt="git" />
+          <TechStack src="/stacks/versionControl/github.svg" alt="github" />
+        </SkillBox>
+        <SkillBox>
+          <SkillText>etc : </SkillText>
+          <TechStack src="/stacks/deployment/vercel.svg" alt="vercel" />
+          <TechStack src="/stacks/communication/figma.svg" alt="figma" />
+          <TechStack src="/stacks/communication/notion.svg" alt="notion" />
+          <TechStack src="/stacks/communication/slack.svg" alt="slack" />
+          <TechStack src="/stacks/communication/vscode.svg" alt="vscode" />
+        </SkillBox>
+      </TechStackBox>
       {/* <div className="소개글">
         <IntroductionText>
           안녕하세요. 프론트엔드 개발자 <strong>윤경민</strong>입니다.
@@ -128,7 +130,7 @@ const Container = styled.div`
   background-color: var(--aboutme-background-color);
   padding: 20px 50px;
   box-sizing: border-box;
-  @media all and (max-width:800px) {
+  @media all and (max-width:767px) {
     padding: 20px;
   }
 `;
@@ -137,7 +139,7 @@ const Information = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media all and (max-width:600px) {
+  @media all and (max-width:767px) {
     flex-direction: column;
   }
 `;
@@ -153,14 +155,11 @@ const ImageContainer = styled.div`
     max-width:300px;
     height: 300px;
   }
-  @media all and (max-width:800px) {
+  @media all and (max-width:767px) {
     max-width:200px;
     min-width: 200px;
     height: 200px;
-    margin-right: 30px;
-  }
-  @media all and (max-width:600px) {
-    margin-right: 0;
+    margin-right: 0px;
     margin-bottom: 20px;
   }
 `;
@@ -170,7 +169,7 @@ const Name = styled.div`
   font-size: 2.5rem;
   color: var(--main-font-color);
   margin-bottom: 25px;
-  @media all and (max-width:800px) {
+  @media all and (max-width:767px) {
     font-size: 2rem;
   }
 `;
@@ -181,7 +180,7 @@ const Phone = styled(Flex)`
 const Text = styled.div`
   font-size: 1.2rem;
   margin-left: 10px;
-  @media all and (max-width:800px) {
+  @media all and (max-width:767px) {
     font-size: 1.1rem;
   }
 `;
@@ -189,7 +188,7 @@ const Email = styled(Phone)``;
 const Github = styled(Email)``;
 const Icon = styled.i`
   font-size: 30px;
-  @media all and (max-width:800px) {
+  @media all and (max-width:767px) {
     font-size: 26px;
   }
 `;
@@ -199,9 +198,22 @@ const GithubText = styled(Text)`
     text-decoration: underline;
   }
 `;
+const TechStackBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0 20px;
+  @media all and (max-width:767px) {
+    display: block;
+  }
+`;
 const TechStacksText = styled.div`
-  font-size: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
   color: var(--main-font-color);
+  @media all and (max-width:767px) {
+    font-size: 24px;
+  }
   `;
 const SkillBox = styled.div`
   display: flex;
@@ -209,9 +221,11 @@ const SkillBox = styled.div`
   align-items: center;
   margin: 10px 0;
   gap: 5px;
+  width: 100%;
+  max-width: 717px;
   @media all and (max-width:767px) {
     margin: 10px 0 15px;
-    gap: 8px;
+    gap: 7px;
   }
 `;
 const SkillText = styled.div`

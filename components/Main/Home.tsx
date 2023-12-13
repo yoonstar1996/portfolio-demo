@@ -30,7 +30,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media all and (max-width:787px) {
+  @media all and (max-width:767px) {
     padding: 0 20px;
   }
 `;
@@ -70,14 +70,14 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
   color: #fff;
   @media all and (max-width:767px) {
     font-size: 1.1rem;
     line-height: 2rem;
   }
- `;
+`;
 
 const Subtitle = styled.h2`
   font-size: 1.5em;
