@@ -10,25 +10,21 @@ export const celebProject = {
   projectImageAlt: "celeb_logo",
   projectSubDescs: [
     {
-      iconText: "check",
       text: "간단한 소개",
       descText:
         "(주)셀럽스타즈는 오디션, 캐스팅, 아르바이트 등을 포함한 모델과 배우 캐스팅에 특화된 전문 플랫폼 입니다.",
     },
     {
-      iconText: "check",
       text: "Github",
       url: "https://github.com/yoonstar1996/celebstars",
       onClick: handleClickUrl,
     },
     {
-      iconText: "check",
       text: "URL",
       url: "https://celebstars.co.kr/",
       onClick: handleClickUrl,
     },
     {
-      iconText: "check",
       text: "FrontEnd",
       descText: "Next.js, Typescript, Redux, styled-components",
     },
@@ -112,29 +108,26 @@ export const sgtProject = {
   projectTitle: "SGT Market",
   projectSubTitle: "2022.09 ~ 2022.10 (4인 프로젝트)",
   projectImageSrc: {
-    dark: "/projects/sgt/sgt-banner.jpg",
-    light: "/projects/sgt/sgt-banner.jpg",
+    dark: "/projects/sgt/sgt-bannner.jpg",
+    light: "/projects/sgt/sgt-bannner.jpg",
   },
   projectImageAlt: "sgt_logo",
   projectSubDescs: [
     {
-      iconText: "check",
       text: "간단한 소개",
       descText: "SGT Market은 중고거래 사이트이자 나눔을 하는 사이트입니다.",
     },
     {
-      iconText: "check",
       text: "Github",
       url: "https://github.com/yoonstar1996/kdt--2project",
       onClick: handleClickUrl,
     },
+
     {
-      iconText: "check",
       text: "FrontEnd",
       descText: "Javascript, jQuery, axios",
     },
     {
-      iconText: "check",
       text: "BackEnd",
       descText: "Node.js, express",
     },
@@ -194,24 +187,20 @@ export const dingonProject = {
   projectImageAlt: "dingon_logo",
   projectSubDescs: [
     {
-      iconText: "check",
       text: "간단한 소개",
       descText:
         "dingon은 커뮤니티 사이트 입니다. 자신만의 생각을 적고 남들과 공유해보세요.",
     },
     {
-      iconText: "check",
       text: "Github",
       url: "https://github.com/yoonstar1996/dingon/tree/main",
       onClick: handleClickUrl,
     },
     {
-      iconText: "check",
       text: "FrontEnd",
       descText: "React, axios, mui",
     },
     {
-      iconText: "check",
       text: "BackEnd",
       descText: "Node.js, express",
     },
@@ -255,24 +244,20 @@ export const beerModeProject = {
   projectImageAlt: "beermode_logo",
   projectSubDescs: [
     {
-      iconText: "check",
       text: "간단한 소개",
       descText:
         "BEERMODE는 맥주에 대한 정보를 제공하고, 맥주에 대한 자신만의 감상과 기록을 남길 수 있는 서비스 입니다.",
     },
     {
-      iconText: "check",
       text: "Github",
       url: "https://github.com/yoonstar1996/BeerMode",
       onClick: handleClickUrl,
     },
     {
-      iconText: "check",
       text: "FrontEnd",
       descText: "Javascript, jQuery, bootstrap",
     },
     {
-      iconText: "check",
       text: "BackEnd",
       descText: "Node.js, ejs",
     },
@@ -308,23 +293,19 @@ export const starbucksProject = {
   projectImageAlt: "starbucks_logo",
   projectSubDescs: [
     {
-      iconText: "check",
       text: "간단한 소개",
       descText: "HTML, CSS, JS를 이용한 클론 프로젝트입니다.",
     },
     {
-      iconText: "check",
       text: "Github",
       url: "https://github.com/yoonstar1996/self-study/tree/main/fastcampus/FrontEnd-start/Part1/starbucks",
       onClick: handleClickUrl,
     },
     {
-      iconText: "check",
       text: "FrontEnd",
       descText: "Javascript, jQuery, bootstrap",
     },
     {
-      iconText: "check",
       text: "BackEnd",
       descText: "Node.js, ejs",
     },
@@ -357,23 +338,19 @@ export const chatProject = {
   projectImageAlt: "chat_logo",
   projectSubDescs: [
     {
-      iconText: "check",
       text: "간단한 소개",
       descText: "socket.io를 활용한 미니 프로젝트입니다.",
     },
     {
-      iconText: "check",
       text: "Github",
       url: "https://github.com/yoonstar1996/socket",
       onClick: handleClickUrl,
     },
     {
-      iconText: "check",
       text: "FrontEnd",
       descText: "Javascript, jQuery, bootstrap",
     },
     {
-      iconText: "check",
       text: "BackEnd",
       descText: "Node.js, ejs",
     },

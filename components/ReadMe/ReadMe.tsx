@@ -9,12 +9,14 @@ interface ReadMeProps {
   clickReadMe: boolean;
   handleClickREADME: () => void;
   projectInfo: ProjectInfo;
+  windowWidth: number;
 }
 
 export default function ReadMe({
   clickReadMe,
   handleClickREADME,
   projectInfo,
+  windowWidth,
 }: ReadMeProps) {
   const ReadMeRef = useRef<HTMLDivElement>(null);
   const HeaderRef = useRef<HTMLDivElement>(null);
@@ -47,6 +49,20 @@ export default function ReadMe({
       </Header>
       <Content>
         <Title>{projectInfo.projectTitle}</Title>
+        {windowWidth <= 767 &&
+          projectInfo.projectSubDescs.map(
+            (item, index) =>
+              (item.text === "Github" || item.text === "URL") && (
+                <Flex key={index}>
+                  <GitHubText>{item.text}</GitHubText>
+                  <GitHubUrl
+                    onClick={() => item?.url && item?.onClick?.(item.url)}
+                  >
+                    {item.url}
+                  </GitHubUrl>
+                </Flex>
+              )
+          )}
         {/* <SubTitle>📌 담당 페이지</SubTitle>
         <SummaryContent>{projectInfo.projectSummary}</SummaryContent> */}
         {projectInfo.projectMainFunction && (
@@ -152,7 +168,7 @@ const Content = styled.div`
     padding: 18px 100px;
   }
   @media all and (max-width:767px) {
-    padding: 18px 40px;
+    padding: 18px 30px;
   }
 `;
 const Title = styled.div`
@@ -228,4 +244,31 @@ const TechSkills = styled.ul`
 `;
 const TechSkill = styled.li`
   line-height: 24px;
+`;
+
+const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 20px;
+  color: var(--main-font-color);
+`;
+const GitHubText = styled.div`
+  display: inline-block;
+  min-width: 65px;
+  line-height: 23px;
+  font-weight: 600;
+  &::before {
+    content: "";
+    border-left: var(--main-border-left);
+    padding-left: 4px;
+  }
+`;
+const GitHubUrl = styled.div`
+  line-height: 18px;
+  color: var(--main-url-color);
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 `;

@@ -17,6 +17,7 @@
   --sub-font-color: #fff;
 
   --main-border-color: 2px solid #fff;
+  --main-border-left: 5px solid #222;
 
   --main-border-radius: 7px;
 
@@ -74,6 +75,8 @@
   --sub-font-color: #111;
 
   --main-border-bottom: 1px solid #ddd;
+
+  --main-border-left: 5px solid #fff;
 
   --main-project-box-shadow: rgba(230, 230, 230, 0.2);
 
