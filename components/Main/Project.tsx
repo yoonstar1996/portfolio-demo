@@ -13,7 +13,9 @@ interface ProjectProps {
 
 export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
   const [clickReadMe, setClickReadMe] = useState<boolean>(false);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number | undefined>(
+    window.innerWidth
+  );
 
   const handleClickREADME = () => {
     setClickReadMe((pre: boolean) => !pre);
@@ -57,7 +59,7 @@ export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
             fill
           />
         </ProjectImageBox>
-        {windowWidth > 767 && (
+        {windowWidth !== undefined && windowWidth > 767 && (
           <ReadMeButton onClick={handleClickREADME}>
             <div>자세히보기</div>
             <Icon className="material-symbols-outlined">arrow_right</Icon>
@@ -65,7 +67,8 @@ export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
           </ReadMeButton>
         )}
 
-        {windowWidth > 767 &&
+        {windowWidth !== undefined &&
+          windowWidth > 767 &&
           projectInfo.projectSubDescs.map((subDesc, index) => (
             <SubDesc key={index}>
               <Flex>
@@ -89,7 +92,8 @@ export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
             </SubDesc>
           ))}
 
-        {windowWidth <= 767 &&
+        {windowWidth !== undefined &&
+          windowWidth <= 767 &&
           projectInfo.projectSubDescs.slice(0, 1).map((subDesc, index) => (
             <>
               <SubDesc>
@@ -101,7 +105,7 @@ export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
             </>
           ))}
 
-        {windowWidth <= 767 && (
+        {windowWidth !== undefined && windowWidth <= 767 && (
           <ReadMeButton onClick={handleClickREADME}>
             <div>자세히보기</div>
             <Icon className="material-symbols-outlined">arrow_right</Icon>

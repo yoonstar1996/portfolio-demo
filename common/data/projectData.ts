@@ -1,5 +1,40 @@
 import { handleClickUrl } from "../function/handleClick";
 
+export const portfolioProject = {
+  projectTitle: "포트폴리오 웹사이트",
+  projectSubTitle: "2023.11 ~ 2023.12 (1인 프로젝트)",
+  projectImageSrc: {
+    dark: "/projects/portfolio/portfolio-banner-dark.png",
+    light: "/projects/portfolio/portfolio-banner-light.png",
+  },
+  projectImageAlt: "portfolio_banner",
+  projectSubDescs: [
+    {
+      text: "간단한 소개",
+      descText: "포트폴리오 용도로 제작한 웹사이트 입니다.",
+    },
+    {
+      text: "Github",
+      url: "https://github.com/yoonstar1996/portfolio",
+      onClick: handleClickUrl,
+    },
+    {
+      text: "URL",
+      url: "https://portfolio-tau-lime-32.vercel.app",
+      onClick: handleClickUrl,
+    },
+    {
+      text: "FrontEnd",
+      descText: "Next.js, TypeScript, styled-components",
+    },
+  ],
+  projectSummary: "포폴 서머리",
+  projectMainFunction: ["간단한 자기소개, 인적 사항, 기술 스택, 프로젝트 경험"],
+  projectTechStack: {
+    frontEnd: "Next.js, Typescript, styled-components",
+  },
+};
+
 export const celebProject = {
   projectTitle: "(주)셀럽스타즈",
   projectSubTitle: "2023.03 ~ 2023.08 (3인 프로젝트) (인턴)",
@@ -28,7 +63,7 @@ export const celebProject = {
       text: "FrontEnd",
       descText: "Next.js, Typescript, Redux, styled-components",
     },
-    { iconText: "check", text: "BackEnd", descText: "Nest.js, prisma" },
+    { text: "BackEnd", descText: "Nest.js, prisma" },
   ],
   projectSummary: "셀럽 서머리",
   projectMainFunction: [

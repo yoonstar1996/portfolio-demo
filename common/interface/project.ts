@@ -6,7 +6,6 @@ export interface ProjectInfo {
     light: string;
   };
   projectSubDescs: {
-    iconText: string;
     text: string;
     url?: string;
     onClick?: (url: string) => void;
@@ -17,6 +16,6 @@ export interface ProjectInfo {
   projectMainFunction: string[];
   projectTechStack: {
     frontEnd: string;
-    backEnd: string;
+    backEnd?: string;
   };
 }

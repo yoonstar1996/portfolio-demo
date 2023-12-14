@@ -9,7 +9,7 @@ interface ReadMeProps {
   clickReadMe: boolean;
   handleClickREADME: () => void;
   projectInfo: ProjectInfo;
-  windowWidth: number;
+  windowWidth: any;
 }
 
 export default function ReadMe({
@@ -49,7 +49,8 @@ export default function ReadMe({
       </Header>
       <Content>
         <Title>{projectInfo.projectTitle}</Title>
-        {windowWidth <= 767 &&
+        {windowWidth !== undefined &&
+          windowWidth <= 767 &&
           projectInfo.projectSubDescs.map(
             (item, index) =>
               (item.text === "Github" || item.text === "URL") && (
@@ -99,12 +100,16 @@ export default function ReadMe({
 
         <SubTitle>🛠️ Technology Stack(s)</SubTitle>
         <TechSkills>
-          <TechSkill>
-            Frontend : {projectInfo.projectTechStack.frontEnd}
-          </TechSkill>
-          <TechSkill>
-            Backend : {projectInfo.projectTechStack.backEnd}
-          </TechSkill>
+          {projectInfo.projectTechStack.frontEnd && (
+            <TechSkill>
+              Frontend : {projectInfo.projectTechStack.frontEnd}
+            </TechSkill>
+          )}
+          {projectInfo.projectTechStack.backEnd && (
+            <TechSkill>
+              Backend : {projectInfo.projectTechStack.backEnd}
+            </TechSkill>
+          )}
         </TechSkills>
       </Content>
     </Container>
