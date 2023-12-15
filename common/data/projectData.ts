@@ -143,8 +143,8 @@ export const sgtProject = {
   projectTitle: "SGT Market",
   projectSubTitle: "2022.09 ~ 2022.10 (4인 프로젝트)",
   projectImageSrc: {
-    dark: "/projects/sgt/sgt-bannner.jpg",
-    light: "/projects/sgt/sgt-bannner.jpg",
+    dark: "/projects/sgt/sgt-banner.jpg",
+    light: "/projects/sgt/sgt-banner.jpg",
   },
   projectImageAlt: "sgt_logo",
   projectSubDescs: [

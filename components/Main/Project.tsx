@@ -13,9 +13,7 @@ interface ProjectProps {
 
 export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
   const [clickReadMe, setClickReadMe] = useState<boolean>(false);
-  const [windowWidth, setWindowWidth] = useState<number | undefined>(
-    window.innerWidth
-  );
+  const [windowWidth, setWindowWidth] = useState<number | undefined>(0);
 
   const handleClickREADME = () => {
     setClickReadMe((pre: boolean) => !pre);
@@ -74,20 +72,16 @@ export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
               <Flex>
                 <SubDescText>{subDesc.text}</SubDescText>
               </Flex>
-              {subDesc.onClick && subDesc.url ? (
-                <>
-                  <SubDescUrl
-                    onClick={() =>
-                      subDesc?.url && subDesc?.onClick?.(subDesc.url)
-                    }
-                  >
-                    {subDesc?.url}
-                  </SubDescUrl>
-                </>
+              {subDesc.onClick && subDesc?.url ? (
+                <SubDescUrl
+                  onClick={() =>
+                    subDesc?.url && subDesc?.onClick?.(subDesc.url)
+                  }
+                >
+                  {subDesc?.url}
+                </SubDescUrl>
               ) : (
-                <>
-                  <SubDesc2>{subDesc.descText}</SubDesc2>
-                </>
+                <SubDesc2>{subDesc.descText}</SubDesc2>
               )}
             </SubDesc>
           ))}
@@ -95,14 +89,12 @@ export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
         {windowWidth !== undefined &&
           windowWidth <= 767 &&
           projectInfo.projectSubDescs.slice(0, 1).map((subDesc, index) => (
-            <>
-              <SubDesc>
-                <Flex>
-                  <SubDescText>{subDesc.text}</SubDescText>
-                </Flex>
-                <SubDesc2>{subDesc.descText}</SubDesc2>
-              </SubDesc>
-            </>
+            <SubDesc key={index}>
+              <Flex>
+                <SubDescText>{subDesc.text}</SubDescText>
+              </Flex>
+              <SubDesc2>{subDesc.descText}</SubDesc2>
+            </SubDesc>
           ))}
 
         {windowWidth !== undefined && windowWidth <= 767 && (

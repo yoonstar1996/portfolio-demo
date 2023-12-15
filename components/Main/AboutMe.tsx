@@ -18,12 +18,13 @@ export default function AboutMe({
   handleClickAboutMe,
 }: AboutMeProps) {
   const myRef = useRef(null);
+  const myImageRef = useRef(null);
 
   return (
     <Container ref={aboutMeRef}>
       <Title text="About Me" onClick={handleClickAboutMe} />
       <Information ref={myRef}>
-        <ImageContainer>
+        <ImageContainer ref={myImageRef}>
           <Image src="/aboutMe/myPicture.jpg" alt="my_picture" fill />
         </ImageContainer>
         <Contact>
