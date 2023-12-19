@@ -74,7 +74,12 @@ export default function ReadMe({
               <MainFunctionContent key={index}>
                 {item.charAt(0) === "/" ? (
                   <ProjectImageBox>
-                    <StyledImage src={item} alt={`image_${index}`} fill />
+                    <StyledImage
+                      src={item}
+                      alt={`image_${index}`}
+                      fill
+                      sizes="100vw 400px"
+                    />
                   </ProjectImageBox>
                 ) : item.charAt(0) === "@" ? (
                   <SubFunctions>
@@ -241,6 +246,9 @@ const ProjectImageBox = styled.div`
   height: 400px;
   margin-bottom: 32px;
   margin-left: 20px;
+  @media all and (max-width:767px) {
+    margin-left: 0px;
+  }
 `;
 const StyledImage = styled(Image)``;
 const TechSkills = styled.ul`

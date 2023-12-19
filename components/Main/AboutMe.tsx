@@ -25,7 +25,13 @@ export default function AboutMe({
       <Title text="About Me" onClick={handleClickAboutMe} />
       <Information ref={myRef}>
         <ImageContainer ref={myImageRef}>
-          <Image src="/aboutMe/myPicture.jpg" alt="my_picture" fill />
+          <Image
+            src="/aboutMe/myPicture.jpg"
+            alt="my_picture"
+            fill
+            priority={true}
+            sizes="(max-width:1200px) 100% 300px, (max-width:767px) 200px 200px"
+          />
         </ImageContainer>
         <Contact>
           <Name>윤경민</Name>

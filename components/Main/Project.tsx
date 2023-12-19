@@ -47,13 +47,14 @@ export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
       <ProjectSubTitle>{projectInfo.projectSubTitle}</ProjectSubTitle>
       <ProjectContent>
         <ProjectImageBox>
-          <Image
+          <StyledImage
             src={
               isDarkMode
                 ? projectInfo.projectImageSrc.dark
                 : projectInfo.projectImageSrc.light
             }
             alt={projectInfo.projectImageAlt}
+            sizes="(max-width:767px) 100vw"
             fill
           />
         </ProjectImageBox>
@@ -145,6 +146,10 @@ const ProjectImageBox = styled.div`
   width: 100%;
   height: 150px;
   margin-bottom: 15px;
+`;
+const StyledImage = styled(Image)`
+  width: 100%;
+  height: 150px;
 `;
 const ReadMeButton = styled.div`
   display: inline-flex;
