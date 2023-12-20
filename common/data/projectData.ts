@@ -29,7 +29,12 @@ export const portfolioProject = {
     },
   ],
   projectSummary: "포폴 서머리",
-  projectMainFunction: ["간단한 자기소개, 인적 사항, 기술 스택, 프로젝트 경험"],
+  projectMainFunction: [
+    "간단한 자기소개",
+    "인적 사항",
+    "기술 스택",
+    "프로젝트 경험",
+  ],
   projectTechStack: {
     frontEnd: "Next.js, Typescript, styled-components",
   },
