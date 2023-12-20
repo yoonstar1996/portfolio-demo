@@ -49,7 +49,7 @@ export default function Main({
 
   return (
     <Container>
-      {/* <Home handleClickAboutMe={handleClickAboutMe} /> */}
+      <Home handleClickAboutMe={handleClickAboutMe} />
       <AboutMe
         isDarkMode={isDarkMode}
         aboutMeRef={aboutMeRef}
