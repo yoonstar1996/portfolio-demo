@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ReadMe from "../ReadMe/ReadMe";
 import { ProjectInfo } from "../../common/interface/project";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 interface ProjectProps {
   isDarkMode: boolean;
@@ -13,27 +14,11 @@ interface ProjectProps {
 
 export default function Project({ isDarkMode, projectInfo }: ProjectProps) {
   const [clickReadMe, setClickReadMe] = useState<boolean>(false);
-  const [windowWidth, setWindowWidth] = useState<number | undefined>(0);
+  const { windowWidth } = useIsMobile();
 
   const handleClickREADME = () => {
     setClickReadMe((pre: boolean) => !pre);
   };
-
-  // 창 크기가 변경될 때마다 실행되는 이벤트 핸들러
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  // 컴포넌트가 마운트될 때 한 번 실행되는 useEffect
-  useEffect(() => {
-    // 이벤트 리스너 등록
-    window.addEventListener("resize", handleResize);
-
-    // 컴포넌트 언마운트 시에 이벤트 리스너 제거
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [windowWidth]);
 
   return (
     <ProjectBox>
