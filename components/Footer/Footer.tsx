@@ -32,9 +32,7 @@ export default function Footer({ isDarkMode }: FooterProps) {
           width={44}
           height={44}
           isdarkmode={isDarkMode.toString()}
-          onClick={() =>
-            handleClickUrl("https://www.instagram.com/yoonstar96/")
-          }
+          onClick={() => handleClickUrl("https://www.instagram.com/yyonstr/")}
         />
       </ImageContainer>
       <CopyRight>
