@@ -76,11 +76,13 @@ export default function AboutMe({
           <TechStack src="/stacks/front/redux.svg" alt="redux" />
           <TechStack src="/stacks/front/sass.svg" alt="sass" />
           <TechStack src="/stacks/front/bootstrap.svg" alt="bootstrap" />
+          <TechStack src="/stacks/front/java.svg" alt="java" />
         </SkillBox>
         <SkillBox>
           <SkillText>Backend : </SkillText>
           <TechStack src="/stacks/back/nodejs.svg" alt="nodejs" />
           <TechStack src="/stacks/back/express.svg" alt="express" />
+          <TechStack src="/stacks/back/mysql.svg" alt="mysql" />
         </SkillBox>
         <SkillBox>
           <SkillText>Version Control : </SkillText>
