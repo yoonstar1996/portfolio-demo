@@ -1,5 +1,61 @@
 import { handleClickUrl } from "../function/handleClick";
 
+export const emotionDiaryProject = {
+  projectTitle: "나만의 감정 일기장",
+  projectSubTitle: "2024.08 ~ 2024.08 (1인 프로젝트)",
+  projectImageSrc: {
+    dark: "/projects/emotionDiary/emotion-diary-thumbnail.png",
+    light: "/projects/emotionDiary/emotion-diary-thumbnail.png",
+  },
+  projectImageAlt: "emotionDiary_banner",
+  projectSubDescs: [
+    {
+      text: "간단한 소개",
+      descText: "나만의 감정 일기장을 만들어 보았습니다.",
+    },
+    {
+      text: "Github",
+      url: "https://github.com/yoonstar1996/self-study/tree/main/udemy/react/onbite-react/emotion-diary",
+      onClick: handleClickUrl,
+    },
+    {
+      text: "URL",
+      url: "https://emotion-diary-sandy-pi.vercel.app/",
+      onClick: handleClickUrl,
+    },
+    {
+      text: "FrontEnd",
+      descText: "React.js",
+    },
+  ],
+  projectSummary: "나만의 감정 일기장",
+  projectMainFunction: [
+    "메인 페이지",
+    "@헤더의 양쪽 버튼을 클릭하여, 다른 날짜로 이동",
+    "@최신순, 오래된 순으로 필터링 가능",
+    "@새 일기 쓰기 버튼 클릭 시, 일기 쓰는 페이지로 이동",
+    "/projects/emotionDiary/emotion-diary-main.png",
+    "New 페이지",
+    "@날짜, 감정, 일기를 입력",
+    "@뒤로 가기 버튼 클릭 시, nav(-1)",
+    "@취소 하기 버튼 클릭 시, 메인 페이지로 이동",
+    "@작성 완료 버튼 클릭 시, localStorage에 저장 후, 메인 페이지로 이동",
+    "/projects/emotionDiary/emotion-diary-create.png",
+    "Edit 페이지",
+    "@해당 데이터를 불러와 날짜, 감정, 일기가 입력되어 있는 상태로 불러온다.",
+    "@삭제 하기 버튼 클릭 시, 확인하는 팝업을 띄운 후, 확인을 클릭해야 삭제",
+    "@다른 기능들은 새 일기 작성하는 것과 똑같은 로직",
+    "/projects/emotionDiary/emotion-diary-update.png",
+    "Diary 페이지",
+    "@해당 날짜의 일기를 상세하게 볼 수 있는 페이지",
+    "@수정 하기 버튼 클릭 시, Edit페이지로 이동",
+    "/projects/emotionDiary/emotion-diary-detail.png",
+  ],
+  projectTechStack: {
+    frontEnd: "React.js",
+  },
+};
+
 export const portfolioProject = {
   projectTitle: "포트폴리오 웹사이트",
   projectSubTitle: "2023.11 ~ 2023.12 (1인 프로젝트)",

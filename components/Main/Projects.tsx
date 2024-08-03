@@ -9,6 +9,7 @@ import {
   celebProject,
   chatProject,
   dingonProject,
+  emotionDiaryProject,
   portfolioProject,
   sgtProject,
   starbucksProject,
@@ -29,6 +30,7 @@ export default function Projects({
     <Container ref={projectRef}>
       <Title text="Projects" onClick={handleClickProject} />
       <ProjectBox>
+        <Project isDarkMode={isDarkMode} projectInfo={emotionDiaryProject} />
         <Project isDarkMode={isDarkMode} projectInfo={portfolioProject} />
         <Project isDarkMode={isDarkMode} projectInfo={celebProject} />
         <Project isDarkMode={isDarkMode} projectInfo={sgtProject} />
