@@ -14,11 +14,11 @@ export default function Home({ handleClickAboutMe }: HomeProps) {
       <BackgroundAnimation />
       <Content>
         <Title>안녕하세요.</Title>
-        <Title>성장 가능성이 많은 개발자입니다.</Title>
         <Title>
-          예민하고 꼼꼼한, 그리고 남에게 피해 주는 것을 싫어하는 성격이 저의
-          장점입니다.
+          저는 사람들과 함께 일하는 것을 즐기며, 팀 내에서 잘 어울리는
+          성격입니다.
         </Title>
+        <Title>또한 성장 가능성이 많은 개발자입니다.</Title>
         <HomeButton text="About Me" onClick={handleClickAboutMe} />
       </Content>
     </Container>
