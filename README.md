@@ -1,8 +1,6 @@
 ---
 # 서비스 간단 소개
 
-![portfolio-banner-light](https://github.com/user-attachments/assets/c72fca4a-f158-44e4-8e6c-d016a951cc0f)
-
 * **저의 포트폴리오를 정리하여 볼 수 있도록 만든 프로젝트 입니다.**
 
 ## Portfolio
